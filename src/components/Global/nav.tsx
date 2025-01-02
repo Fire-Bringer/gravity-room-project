@@ -1,11 +1,44 @@
-import { NavProps } from "@/types";
+'use client'
 
-const NavBar = ( { navItem }: NavProps ) => {
+const NavBar = () => {
+  const navItems = [
+    {
+      label: "Home",
+      onClick: () => {
+      },
+    },
+    {
+      label: "About",
+      onClick: () => {
+      },
+    },
+    {
+      label: "Portfolio",
+      onClick: () => {
+      },
+    },
+    {
+      label: "Gallery",
+      onClick: () => {
+      },
+    },
+    {
+      label: "Music",
+      onClick: () => {
+      },
+    },
+    {
+      label: "Contact",
+      onClick: () => {
+      },
+    }
+  ];
+
   return (
-    <div className="w-full h-[10vh] bg-black border-b-white">
-      <ul className="flex justify-around text-white">
-        {navItem.map((item, index) => (
-          <li key={index} onClick={item.onClick} className="cursor-pointer">
+    <div className="w-full h-[5vh] bg-black border-b">
+      <ul className="h-full flex align-center justify-around text-white">
+        {navItems.map((item, index) => (
+          <li key={index} onClick={item.onClick} className="cursor-pointer self-center">
             {item.label}
           </li>
         ))}
