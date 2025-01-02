@@ -5,5 +5,5 @@ export interface NavProps {
   navItem: {
     label: string;
     onClick: () => void;
-  };
+  }[];
 }
