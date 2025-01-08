@@ -1,9 +1,9 @@
-import Hero from "@/components/HomePage/Hero";
+import LoaderPage from "@/components/Loader/Loader";
 
 const HomePage = () => {
   return (
     <section>
-      <Hero/>
+      <LoaderPage/>
     </section>
   );
 };
