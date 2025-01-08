@@ -8,9 +8,13 @@ const NavBar = () => {
       <h1 className="text-3xl tracking-tight font-bold">
         Gravity Room
       </h1>
-      <div className="flex gap-5">
+      <div className="flex gap-8">
         <TransitionLink href="/" label="Home" />
-        <TransitionLink href="/about" label="About" />
+        <TransitionLink href="#About" label="About" />
+        <TransitionLink href="#Videos" label="Videos" />
+        <TransitionLink href="#Photos" label="Photos" />
+        <TransitionLink href="#Music" label="Music" />
+        <TransitionLink href="#Contact" label="Contact" />
       </div>
     </nav>
 
