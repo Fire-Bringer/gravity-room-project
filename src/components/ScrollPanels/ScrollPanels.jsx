@@ -87,7 +87,7 @@ function scrollPanels() {
     <div>
       <section className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
         <h2 className="section-title">
-          PANELS <br /> effect
+          Yayoi <br /> Earthling
         </h2>
 
         <p className="m-0 max-w-[400px]">BUILT USING NEXT.JS AND GSAP</p>

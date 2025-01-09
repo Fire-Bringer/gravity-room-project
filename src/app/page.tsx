@@ -1,5 +1,5 @@
 //import Image from "next/image";
-import ScrollPanels from '@/components/ScrollPanels';
+import ScrollPanels from "@/components/ScrollPanels/ScrollPanels";
 import Hero from "@/components/HomePage/Hero";
 
 const HomePage = () => {
