@@ -1,6 +1,22 @@
+'use client';
 import React from "react";
+import Lenis from "lenis";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 
 function scrollPanels() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const dom = {
+      columns: document.querySelector('.section-col'),
+      columnWraps: document.querySelectorAll('.section-col .column-wrap'),
+      items: document.querySelectorAll('.section-cols .col-item'),
+    };
+  });
+
   return (
     <div>
       <section className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
@@ -22,28 +38,28 @@ function scrollPanels() {
           <div className="column-wrap relative flex flex-col pt-[5vh] px-0 pb-[15vh] z-1">
             <div className="column relative block">
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
             </div>
           </div>
@@ -54,28 +70,28 @@ function scrollPanels() {
           <div className="column-wrap relative flex flex-col pt-[5vh] px-0 pb-[15vh] z-1">
             <div className="column relative block">
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
             </div>
           </div>
@@ -86,28 +102,28 @@ function scrollPanels() {
           <div className="column-wrap relative flex flex-col pt-[5vh] px-0 pb-[15vh] z-1">
             <div className="column relative block">
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
               <div className="col-item w-[25vw] h-[25vw] relative overflow-hidden rounded-[4px] cursor-pointer mt-0 mr-0 mb-[2.5vw] ml-0">
-                <img className="col-img" src="/images/img1.jpg"/>
+                <img className="col-img" src="/images/space-hero.png"/>
               </div>
             </div>
           </div>
