@@ -4,7 +4,7 @@ function scrollPanels() {
   return (
     <div>
       <section className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
-        <h2 className="section_title">
+        <h2 className="section-title">
           PANELS <br /> effect
         </h2>
 

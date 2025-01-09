@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-0 h-screen flex flex-col">
         <NavBar/>
-        <div className="grow">
+        <div className="grow bg-transparent">
           {children}
         </div>
         <Footer/>

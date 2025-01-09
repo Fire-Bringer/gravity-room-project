@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 import ScrollPanels from '@/components/ScrollPanels';
 import Hero from "@/components/HomePage/Hero";
 
