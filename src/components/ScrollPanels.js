@@ -15,6 +15,25 @@ function scrollPanels() {
       columnWraps: document.querySelectorAll('.section-col .column-wrap'),
       items: document.querySelectorAll('.section-cols .col-item'),
     };
+
+    let lenis;
+
+    const SmoothScroll = () => {
+      lenis = new Lenis({
+        lerp: 0.1,
+        smooth: true,
+      });
+
+      const ScrollFn = (time) => {
+        lenis.raf(time)
+
+        requestAnimationFrame(ScrollFn);
+      };
+
+      requestAnimationFrame(ScrollFn);
+    };
+    
+    const ScrollAni = () => {};
   });
 
   return (
