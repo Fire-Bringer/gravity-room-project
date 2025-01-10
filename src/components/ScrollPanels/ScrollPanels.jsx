@@ -115,9 +115,28 @@ function scrollPanels() {
           <br />
           It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
         </p>
-        <div className="m-0 max-w-[600px] mt-auto">
-          <ul className="">
-            
+        <div className="m-0 max-w-[600px] mt-8 flex">
+          <ul className="flex flex-row justify-center w-full gap-16 bg-[#0f0e0e]">
+            <li>
+              <a href="https://open.spotify.com/artist/3vbXUUQLZUwtRpagZ8cErD" target="_blank">
+                <Image src={'/images/spotify-line.svg'} alt="Spotify Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/yayoi0410/" target="_blank">
+                <Image src={'/images/instagram-line.svg'} alt="Instagram Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@gravity_room" target="_blank">
+                <Image src={'/images/youtube-line.svg'} alt="YouTube Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/gravityroom4" target="_blank">
+                <Image src={'/images/soundcloud-line.svg'} alt="SoundCloud Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+              </a>
+            </li>
           </ul>
         </div>
       </section>
