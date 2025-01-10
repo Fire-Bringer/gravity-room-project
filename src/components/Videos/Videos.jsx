@@ -1,7 +1,7 @@
 
 const Videos = () => {
   return (
-    <section id="Videos" className="videos-container bg-[#0f0e0e] text-[#F0EAD6] mt-20 flex flex-col items-center mx[10vw] border">
+    <section id="Videos" className="videos-container bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center mx[10vw]">
 
       <div className="video-card w-11/12 flex gap-20 py-20">
 
