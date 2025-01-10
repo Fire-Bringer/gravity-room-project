@@ -86,15 +86,40 @@ function scrollPanels() {
 
   return (
     <div>
-      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
-        <h2 className="section-title bg-[#0f0e0e]">
+      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-8 pb-8">
+        <h2 className="section-title bg-[#0f0e0e] text-5xl mb-8">
           Yayoi
         </h2>
-        <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={300} height={300} className="rounded-full"/>
-        <p className="m-0 max-w-[400px]">BUILT USING NEXT.JS AND GSAP</p>
-        <p className="m-0 max-w-[400px] mt-auto text-red-500">
-          <span>Scroll</span>
+        <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={250} height={250} className="rounded-full"/>
+        <p className="m-0 max-w-[600px] bg-[#0f0e0e] leading-normal mt-8">
+          Gravity Roomにはいろんなものが集まってきます。
+          <br />
+          私たちが重力によって地球に引っ張られているように・・
+          <br />
+          そしてこの世界をいろいろな方法で冒険するのが、
+          <br />
+          Gravity Roomのプロジェクトです。
+          <br />
+          音楽、写真、動画、言葉、など。
+          <br />
+          過ぎ去っていくその瞬間を記録するツールが溢れている時代に感謝。
+          <br />
+          <br />
+          In Gravity Room, all things come together.
+          <br />
+          Just as we are pulled toward the Earth by gravity itself...
+          <br />
+          The Gravity Room project explores this world in a variety of ways.
+          <br />
+          Through Music, Photos, Videos, Words… and more.
+          <br />
+          It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
         </p>
+        <div className="m-0 max-w-[600px] mt-auto">
+          <ul className="">
+            
+          </ul>
+        </div>
       </section>
 
       <section className="section-col leading-none top-0 min-h-screen bg-[#0f0e0e] fixed left-0 right-0 bottom-0 z-[-1] w-full h-screen">

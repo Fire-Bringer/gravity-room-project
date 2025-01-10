@@ -10,14 +10,6 @@
   color: #F0EAD6;
 }
 
-.section-title {
-  font-weight: 300;
-  font-size: clamp(2rem, 17vw, 5rem);
-  margin: 5vh 0 6vh;
-  line-height: 0.9;
-  text-transform: none;
-}
-
 .column-wrap:nth-child(even) {
   margin-top: 20vh;
 }
