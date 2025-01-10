@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      borderRadius: {
+        // Specific border radius for the burger menu
+        'mobile-menu': '0px 0px 0px 20px',
+      },
     },
   },
   plugins: [],
