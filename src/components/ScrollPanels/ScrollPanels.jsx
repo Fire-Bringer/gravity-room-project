@@ -139,6 +139,11 @@ function scrollPanels() {
             </li>
           </ul>
         </div>
+        <button className="bg-[#da30a5fb] px-8 py-4 rounded-[20px] mt-6 flex items-center justify-center">
+          <a href="#Contact" className="bg-inherit">
+            Contact
+          </a>
+        </button>
       </section>
 
       <section className="section-col leading-none top-0 min-h-screen bg-[#0f0e0e] fixed left-0 right-0 bottom-0 z-[-1] w-full h-screen">
