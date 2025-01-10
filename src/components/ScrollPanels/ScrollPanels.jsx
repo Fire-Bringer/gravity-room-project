@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import Image from "next/image";
 
 function scrollPanels() {
   gsap.registerPlugin(ScrollTrigger);
@@ -85,11 +86,11 @@ function scrollPanels() {
 
   return (
     <div>
-      <section className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
-        <h2 className="section-title">
-          Yayoi <br /> Earthling
+      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] h-screen flex flex-col text-center items-center justify-center pt-32 pb-8">
+        <h2 className="section-title bg-[#0f0e0e]">
+          Yayoi
         </h2>
-
+        <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={300} height={300} className="rounded-full"/>
         <p className="m-0 max-w-[400px]">BUILT USING NEXT.JS AND GSAP</p>
         <p className="m-0 max-w-[400px] mt-auto text-red-500">
           <span>Scroll</span>
