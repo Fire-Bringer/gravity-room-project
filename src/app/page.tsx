@@ -1,6 +1,7 @@
 //import Image from "next/image";
-import ScrollPanels from "@/components/ScrollPanels/ScrollPanels";
 import Hero from "@/components/HomePage/Hero";
+import ScrollPanels from "@/components/ScrollPanels/ScrollPanels";
+import Videos from "@/components/Videos/Videos"
 
 const HomePage = () => {
   return (
@@ -10,6 +11,9 @@ const HomePage = () => {
       </section>
       <section>
         <ScrollPanels/>
+      </section>
+      <section>
+        <Videos/>
       </section>
     </main>
   );
