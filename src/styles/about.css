@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .about-img {
+    width: 250px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+  }
+}

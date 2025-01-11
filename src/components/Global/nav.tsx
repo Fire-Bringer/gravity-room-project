@@ -15,12 +15,12 @@ const NavBar = () => {
           "text-2xl",
           "tracking-tight",
           "font-bold",
-          "ml-4"
+          "ml-2"
         )}
       >
         Gravity Room
       </h1>
-      <div className="desktop-menu gap-8 mr-4 hidden lg:flex">
+      <div className="desktop-menu gap-8 mr-2 hidden lg:flex">
         <TransitionLink href="/" label="Home" />
         <TransitionLink href="#About" label="About" />
         <TransitionLink href="#Videos" label="Videos" />
