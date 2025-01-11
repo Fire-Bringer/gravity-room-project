@@ -1,6 +1,7 @@
 import Hero from "@/components/HomePage/Hero";
 import ScrollPanels from "@/components/ScrollPanels/ScrollPanels"
 import Videos from "@/components/Videos/Videos"
+import Music from "@/components/Music/Music"
 
 const HomePage = () => {
   return (
@@ -13,6 +14,9 @@ const HomePage = () => {
       </section>
       <section>
         <Videos/>
+      </section>
+      <section>
+        <Music/>
       </section>
     </main>
   );
