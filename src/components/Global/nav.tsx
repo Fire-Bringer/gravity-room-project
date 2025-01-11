@@ -1,5 +1,5 @@
 "use client";
-import TransitionLink from "../TransitionLink";
+//import TransitionLink from "../TransitionLink";
 import { Averia_Serif_Libre } from "next/font/google";
 import clsx from "clsx";
 import Image from "next/image";
@@ -21,20 +21,20 @@ const NavBar = () => {
         Gravity Room
       </h1>
       <div className="desktop-menu gap-8 mr-2 hidden lg:flex">
-        <TransitionLink href="/" label="Home" />
-        <TransitionLink href="#About" label="About" />
-        <TransitionLink href="#Videos" label="Videos" />
-        <TransitionLink href="#Photos" label="Photos" />
-        <TransitionLink href="#Music" label="Music" />
-        <TransitionLink href="#Contact" label="Contact" />
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Videos">Videos</a>
+        <a href="#Photos">Photos</a>
+        <a href="#Music">Music</a>
+        <a href="#Contact">Contact</a>
       </div>
       <div className="mobile-menu bg-[#0f0e0e] mt-[72px] w-[50vw] h-[70vh] flex flex-col justify-around items-center absolute top-0 right-0 p-4 rounded-mobile-menu border-l border-b border-t z-[100] hidden">
-        <TransitionLink href="/" label="Home" />
-        <TransitionLink href="#About" label="About" />
-        <TransitionLink href="#Videos" label="Videos" />
-        <TransitionLink href="#Photos" label="Photos" />
-        <TransitionLink href="#Music" label="Music" />
-        <TransitionLink href="#Contact" label="Contact" />
+      <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Videos">Videos</a>
+        <a href="#Photos">Photos</a>
+        <a href="#Music">Music</a>
+        <a href="#Contact">Contact</a>
       </div>
       <button className="lg:hidden">
         <Image
