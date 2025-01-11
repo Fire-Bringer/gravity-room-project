@@ -87,7 +87,7 @@ function scrollPanels() {
 
   return (
     <div>
-      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[250vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
+      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
 
         <div className="flex flex-col items-center max-w-[600px] p-8">
 
