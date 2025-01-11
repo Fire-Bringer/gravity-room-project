@@ -4,11 +4,11 @@ const Videos = () => {
     <section id="Videos" className="videos-container bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center mx[10vw]">
 
       {/*Video 1*/}
-      <div className="video-card w-11/12 flex flex-col-reverse gap-10 py-10 px-8">
+      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
 
         <div className="video-text w-full">
-          <h2 className="text-3xl text-center mb-4">A Look In Sacramento, California</h2>
+          <h2 className="text-3xl text-center lg:text-start mb-4">A Look In Sacramento, California</h2>
           <p>
             カリフォルニア州の州都、サクラメント
             <br /><br />
@@ -31,14 +31,14 @@ const Videos = () => {
       </div>
 
       {/*Video 2*/}
-      <div className="video-card w-11/12 flex flex-col gap-10 py-10 px-8">
+      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
         <div className="portfolio-video w-full aspect-video z-10">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuLTFC1kbHc?si=KQzj2ljatxOkOhop&amp;start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
         <div className="video-text w-full">
-          <h2 className="text-3xl text-center mb-4">A Look In Krabi, Thailand</h2>
+          <h2 className="text-3xl text-center lg:text-start mb-4">A Look In Krabi, Thailand</h2>
           <p>
             タイのビーチリゾート地、クラビ
             <br /><br />
@@ -54,11 +54,11 @@ const Videos = () => {
       </div>
 
       {/*Video 3*/}
-      <div className="video-card w-11/12 flex flex-col-reverse gap-10 py-10 px-8">
+      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
 
         <div className="video-text w-full">
-          <h2 className="text-3xl text-center mb-4">A Look In Hoi An, Vietnam</h2>
+          <h2 className="text-3xl text-center lg:text-start mb-4">A Look In Hoi An, Vietnam</h2>
           <p>
             ベトナム、ホイアン
             <br /><br />
