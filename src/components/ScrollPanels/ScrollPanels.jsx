@@ -6,6 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Image from "next/image";
 import "@/styles/about.css"
+import "@/styles/stars.css"
 
 function scrollPanels() {
   gsap.registerPlugin(ScrollTrigger);
@@ -87,17 +88,22 @@ function scrollPanels() {
 
   return (
     <div>
-      <section id="About" className="leading-none static top-0 w-full min-h-screen bg-[#0f0e0e] mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
+      <section id="About" className="relative leading-none top-0 w-full min-h-screen mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
 
-        <div className="flex flex-col items-center max-w-[600px] p-8">
+        {/* Starry Overlay */}
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <div className="clouds"></div>
 
-          <h2 className="section-title bg-[#0f0e0e] text-5xl mb-8">
+        <div className="relative z-10 flex flex-col items-center max-w-[600px] p-8">
+
+          <h2 className="section-title text-5xl mb-8">
             Yayoi
           </h2>
 
           <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full"/>
 
-          <p className="m-0 bg-[#0f0e0e] leading-normal mt-8">
+          <p className="m-0 leading-normal mt-8">
             Gravity Roomにはいろんなものが集まってきます。
             <br />
             私たちが重力によって地球に引っ張られているように・・
@@ -122,25 +128,25 @@ function scrollPanels() {
             It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
           </p>
           <div className="m-0 mt-8 flex">
-            <ul className="flex flex-row justify-center w-full gap-4 md:gap-10 bg-[#0f0e0e]">
+            <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">
               <li>
                 <a href="https://open.spotify.com/artist/3vbXUUQLZUwtRpagZ8cErD" target="_blank">
-                  <Image src={'/images/spotify-line.svg'} alt="Spotify Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+                  <Image src={'/images/spotify-line.svg'} alt="Spotify Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/yayoi0410/" target="_blank">
-                  <Image src={'/images/instagram-line.svg'} alt="Instagram Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+                  <Image src={'/images/instagram-line.svg'} alt="Instagram Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://www.youtube.com/@gravity_room" target="_blank">
-                  <Image src={'/images/youtube-line.svg'} alt="YouTube Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+                  <Image src={'/images/youtube-line.svg'} alt="YouTube Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://soundcloud.com/gravityroom4" target="_blank">
-                  <Image src={'/images/soundcloud-line.svg'} alt="SoundCloud Icon" width={48} height={48} className="bg-[#0f0e0e]" />
+                  <Image src={'/images/soundcloud-line.svg'} alt="SoundCloud Icon" width={48} height={48} />
                 </a>
               </li>
             </ul>
@@ -155,7 +161,7 @@ function scrollPanels() {
 
       <section className="section-col leading-none top-0 min-h-screen bg-[#0f0e0e] fixed left-0 right-0 bottom-0 z-[-1] w-full h-screen">
         <div className="columns w-full relative flex justify-center gap-[2.5vw] h-full -rotate-45 items-center">
-          
+
           {/* Column 1*/}
 
           <div className="column-wrap relative flex flex-col pt-[5vh] px-0 pb-[15vh] z-1">
