@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="m-0 w-full flex justify-center bg-[#0f0e0e] border-t">
+    <div className="relative z-50 m-0 w-full flex justify-center bg-[#0f0e0e] border-t">
       <ul className="w-1/2 flex flex-row justify-center gap-6 p-4 ">
         <li>
           <a

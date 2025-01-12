@@ -5,7 +5,7 @@ const Contact = () => {
   return (
 
 
-    <div id="Contact" className="contact-section tab">
+    <div id="Contact" className="contact-section flex flex-col justify-center tab h-[100vh]">
 
       {/* Starry Overlay */}
       <div className="stars"></div>
