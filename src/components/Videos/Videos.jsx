@@ -1,10 +1,16 @@
+import "@/styles/stars.css"
 
 const Videos = () => {
   return (
-    <section id="Videos" className="videos-container bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center mx[10vw]">
+    <section id="Videos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center mx[10vw]">
+
+      {/* Starry Overlay */}
+      <div className="stars"></div>
+      <div className="twinkling"></div>
+      <div className="clouds"></div>
 
       {/*Video 1*/}
-      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
+      <div className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
 
         <div className="video-text w-full">
@@ -31,7 +37,7 @@ const Videos = () => {
       </div>
 
       {/*Video 2*/}
-      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
+      <div className="video-card relative z-10 w-11/12 flex flex-col lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
         <div className="portfolio-video w-full aspect-video z-10">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuLTFC1kbHc?si=KQzj2ljatxOkOhop&amp;start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -54,7 +60,7 @@ const Videos = () => {
       </div>
 
       {/*Video 3*/}
-      <div className="video-card w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
+      <div className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8">
 
 
         <div className="video-text w-full">
