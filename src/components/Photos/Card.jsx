@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Card = ({ id, frontSrc, frontAlt, backText }) => {
   return (
-    <div className="card" id={id}>
-      <div className="card-wrapper">
-        <div className="flip-card-inner">
+    <div className="card absolute top-1/2 left-1/2 w-[240px] h-[360px] " id={id}>
+      <div className="card-wrapper absolute top-1/2 left-1/2 w-full h-full">
+        <div className="flip-card-inner relative w-full h-full">
             <div className="flop-card-front">
               <Image
                 priority
@@ -12,10 +12,11 @@ const Card = ({ id, frontSrc, frontAlt, backText }) => {
                 width={500}
                 height={500}
                 alt={frontAlt}
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flip-card-back">
-              <p>{backText}</p>
+              <p className="absolute top-1/2 left-1/2 text-center text-xl font-medium">{backText}</p>
             </div>
         </div>
       </div>

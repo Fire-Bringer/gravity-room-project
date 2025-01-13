@@ -1,8 +1,9 @@
 import Card from "./Card";
+import "@/styles/photos.css"
 
 const Photos = () => {
   return (
-    <section className="cards">
+    <section className="cards h-[300vh] relative w-[100vw] bg-blue-600">
         {[...Array(4)].map((_, index) => (
           <Card
             key={index}
