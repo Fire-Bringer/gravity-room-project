@@ -97,13 +97,13 @@ function scrollPanels() {
 
         <div className="relative z-10 flex flex-col items-center max-w-[600px] p-8">
 
-          <h2 className="section-title text-5xl mb-8">
+          <h2 className="section-title text-5xl mb-8 animation-show">
             Yayoi
           </h2>
 
-          <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full"/>
+          <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
-          <p className="m-0 leading-normal mt-8">
+          <p className="m-0 leading-normal mt-8 animation-show">
             Gravity Roomにはいろんなものが集まってきます。
             <br />
             私たちが重力によって地球に引っ張られているように・・
@@ -127,7 +127,7 @@ function scrollPanels() {
             <br />
             It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
           </p>
-          <div className="m-0 mt-8 flex">
+          <div className="m-0 mt-8 flex animation-show">
             <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">
               <li>
                 <a href="https://open.spotify.com/artist/3vbXUUQLZUwtRpagZ8cErD" target="_blank">
@@ -151,7 +151,7 @@ function scrollPanels() {
               </li>
             </ul>
           </div>
-          <button className="bg-[#da30a5fb] px-8 py-4 rounded-[20px] mt-6 flex items-center justify-center">
+          <button className="bg-[#da30a5fb] px-8 py-4 rounded-[20px] mt-6 flex items-center justify-center animation-show">
             <a href="#Contact" className="bg-inherit">
               Contact
             </a>
