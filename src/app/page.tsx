@@ -17,8 +17,6 @@ const HomePage = () => {
 
         <Photos/>
 
-        <Contact/>
-
         <Music/>
 
         <Contact/>

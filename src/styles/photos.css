@@ -1,61 +1,60 @@
-.card {
-  transform: translate(-50%, -50%);
-  perspective: 1000px;
-}
-
-.card p {
-  transform: translate(-50%, -50%);
-}
-
-.card-wrapper {
-  transform: translate(-50%, -50%);
-  animation: floating 3s infinite ease-in-out;
-}
-
-#card-1 .card-wrapper {
-  animation-delay: 0;
-}
-
-#card-2 .card-wrapper {
-  animation-delay: 0.2s;
-}
-
-#card-3 .card-wrapper {
-  animation-delay: 0.4s;
-}
-
-#card-4 .card-wrapper {
-  animation-delay: 0.6s;
-}
-
-.flip-card-inner {
-  transform-style: preserve-3d;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 0.8em;
-  overflow: hidden;
-}
-
-.flip-card-back {
-  padding: 1em;
-  background-color: #fff;
-  transform: rotateY(180deg);
+.photos img{
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 8px;
 }
 
 @keyframes floating {
   0% {
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 0%);
   }
   50% {
-    transform: translate(-50%, -60%);
+    transform: translate(0%, -2.5%);
   }
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 0%);
+  }
+}
+
+#photo-1, #photo-5 {
+  animation-delay: 0;
+}
+
+#photo-2, #photo-6 {
+  animation-delay: 0.2s;
+}
+
+#photo-3 {
+  animation-delay: 0.4s;
+}
+
+#photo-4 {
+  animation-delay: 0.6s;
+}
+
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: floating 3s infinite ease-in-out;
+}
+
+.photo p {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .photo img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo img {
+    height: 400px;
   }
 }
