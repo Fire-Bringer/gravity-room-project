@@ -3,7 +3,7 @@ import Card from "./Card";
 import "@/styles/photos.css"
 
 import { useEffect, useRef } from "react";
-import ReactLenis from "lenis/react";
+import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -13,6 +13,20 @@ gsap.registerPlugin(ScrollTrigger);
 const Photos = () => {
   const container = useRef(null);
   const cardRefs = useRef([]);
+
+  // Must be defined per the Lenis Library use
+  const lenis = useRef(null);
+
+  useEffect(() => {
+    lenis.current = new Lenis({
+      // Lenis options here, e.g., lerp: 0.1
+    });
+    lenis.current.on('scroll', () => {
+      // Update ScrollTrigger on Lenis scroll events
+      ScrollTrigger.refresh();
+    });
+    lenis.current.raf();
+  }, []);
 
   useGSAP(
     () => {
@@ -92,20 +106,18 @@ const Photos = () => {
   }, []);
 
   return (
-    <ReactLenis root>
-      <section className="cards h-[300vh] relative w-[100vw] bg-blue-600" ref={container}>
-          {[...Array(4)].map((_, index) => (
-            <Card
-              key={index}
-              id={`card-${index + 1}`}
-              frontSrc="/images/space-horse.jpg"
-              frontAlt="Card Image"
-              backText="Your card details appear here"
-              ref={(el) => (cardRefs.current[index] = el)}
-            />
-          ))}
-      </section>
-    </ReactLenis>
+    <section className="cards h-[300vh] relative w-[100vw] bg-blue-600" ref={container}>
+        {[...Array(4)].map((_, index) => (
+          <Card
+            key={index}
+            id={`card-${index + 1}`}
+            frontSrc="/images/space-horse.jpg"
+            frontAlt="Card Image"
+            backText="Your card details appear here"
+            ref={(el) => (cardRefs.current[index] = el)}
+          />
+        ))}
+    </section>
   );
 };
 
