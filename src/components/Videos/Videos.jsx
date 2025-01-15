@@ -12,7 +12,7 @@ const Videos = () => {
       <div className="clouds"></div>
 
       {/*Video 1*/}
-      <div className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
+      <div id="video-1" className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
 
 
         <div className="video-text w-full">
@@ -33,16 +33,16 @@ const Videos = () => {
         </div>
 
         <div className="portfolio-video w-full aspect-video z-10">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IFleNgOaE1w?si=rLuhijiHmWQGkf5y" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IFleNgOaE1w?si=rLuhijiHmWQGkf5y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
       </div>
 
       {/*Video 2*/}
-      <div className="video-card relative z-10 w-11/12 flex flex-col lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
+      <div id="video-2" className="video-card relative z-10 w-11/12 flex flex-col lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
 
         <div className="portfolio-video w-full aspect-video z-10">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuLTFC1kbHc?si=KQzj2ljatxOkOhop&amp;start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WuLTFC1kbHc?si=KQzj2ljatxOkOhop&amp;start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
         <div className="video-text w-full">
@@ -62,7 +62,7 @@ const Videos = () => {
       </div>
 
       {/*Video 3*/}
-      <div className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
+      <div id="video-3" className="video-card relative z-10 w-11/12 flex flex-col-reverse lg:flex-row gap-10 py-10 lg:py-20 px-8 animation-show">
 
 
         <div className="video-text w-full">
@@ -81,73 +81,74 @@ const Videos = () => {
         </div>
 
         <div className="portfolio-video w-full aspect-video z-10">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wcfqa4ru6QE?si=vi6VkM6-AnmMsByb&amp;start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wcfqa4ru6QE?si=vi6VkM6-AnmMsByb&amp;start=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
 
       </div>
 
+      <section id="Photos" className="photos relative my-20 grid grid-cols-1 lg:grid-cols-2 text-center mx-[10vw]">
 
-
-
-
-
-          <section id="Photos" className="photos relative my-20 grid grid-cols-1 lg:grid-cols-2 text-center mx-[10vw]">
-
-            <div id="photo-1" className="photo animation-show">
-                <Image
-                  src={"/images/moonview.webp"}
-                  alt="Image of the moon at night"
-                  width={500}
-                  height={500}
-                />
-                <p>Moonview</p>
-            </div>
-            <div id="photo-2" className="photo animation-show">
-                <Image
-                  src={"/images/sunsetsky.webp"}
-                  alt="Image of the sunset"
-                  width={500}
-                  height={500}
-                />
-                <p>Sunset Sky</p>
-            </div>
-            <div id="photo-3" className="photo animation-show">
-                <Image
-                  src={"/images/nightcap.webp"}
-                  alt="Image of a glass of champagne at night"
-                  width={500}
-                  height={500}
-                />
-                <p>Nightcap</p>
-            </div>
-            <div id="photo-4" className="photo animation-show">
-                <Image
-                  src={"/images/flowerbush.webp"}
-                  alt="Image of flowers"
-                  width={500}
-                  height={500}
-                />
-                <p>Morning Glow</p>
-            </div>
-            <div id="photo-5" className="photo animation-show">
-                <Image
-                  src={"/images/sunnytree.webp"}
-                  alt="Image of a tree in the sun"
-                  width={500}
-                  height={500}
-                />
-                <p>Sunny Tree</p>
-            </div>
-            <div id="photo-6" className="photo animation-show">
-                <Image
-                  src={"/images/beachfront.webp"}
-                  alt="Image of a beachfront"
-                  width={500}
-                  height={500}
-                />
-                <p>Beachfront</p>
-            </div>
-          </section>
+        <div id="photo-1" className="photo animation-show">
+            <Image
+              src={"/images/moonview.webp"}
+              alt="Image of the moon at night"
+              width={500}
+              height={500}
+            />
+            <h3>Moonview</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+        <div id="photo-2" className="photo animation-show">
+            <Image
+              src={"/images/sunsetsky.webp"}
+              alt="Image of the sunset"
+              width={500}
+              height={500}
+            />
+            <h3>Sunset Sky</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+        <div id="photo-3" className="photo animation-show">
+            <Image
+              src={"/images/nightcap.webp"}
+              alt="Image of a glass of champagne at night"
+              width={500}
+              height={500}
+            />
+            <h3>Nightcap</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+        <div id="photo-4" className="photo animation-show">
+            <Image
+              src={"/images/flowerbush.webp"}
+              alt="Image of flowers"
+              width={500}
+              height={500}
+            />
+            <h3>Morning Glow</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+        <div id="photo-5" className="photo animation-show">
+            <Image
+              src={"/images/sunnytree.webp"}
+              alt="Image of a tree in the sun"
+              width={500}
+              height={500}
+            />
+            <h3>Sunny Tree</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+        <div id="photo-6" className="photo animation-show">
+            <Image
+              src={"/images/beachfront.webp"}
+              alt="Image of a beachfront"
+              width={500}
+              height={500}
+            />
+            <h3>Beachfront</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+        </div>
+      </section>
 
     </section>
   );

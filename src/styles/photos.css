@@ -5,22 +5,6 @@
   margin-bottom: 8px;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  50% {
-    transform: translate(0%, -2.5%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-
-#photo-1, #photo-5 {
-  animation-delay: 0;
-}
-
 #photo-2, #photo-6 {
   animation-delay: 0.2s;
 }
@@ -43,8 +27,15 @@
   animation: floating 3s infinite ease-in-out;
 }
 
+
 .photo h3 {
+  font-size: 1.2em;
   margin-top: 0.5rem;
+}
+
+.photo p {
+  margin-top: 0.5rem;
+  max-width: 400px;
 }
 
 @media (min-width: 640px) {

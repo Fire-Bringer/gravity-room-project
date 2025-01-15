@@ -95,7 +95,7 @@ function scrollPanels() {
         <div className="twinkling"></div>
         <div className="clouds"></div>
 
-        <div className="relative z-10 flex flex-col items-center max-w-[600px] p-8">
+        <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] p-8">
 
           <h2 className="section-title text-5xl mb-8 animation-show">
             Yayoi
