@@ -1,22 +1,12 @@
 "use client";
 //import TransitionLink from "../TransitionLink";
-import { Averia_Serif_Libre } from "next/font/google";
-import clsx from "clsx";
 import Image from "next/image";
-
-const averia = Averia_Serif_Libre({ weight: ["400"] });
 
 const NavBar = () => {
   return (
     <nav className="w-full h-[10vh] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b">
       <h1
-        className={clsx(
-          averia.className,
-          "text-2xl",
-          "tracking-tight",
-          "font-bold",
-          "ml-2"
-        )}
+        className="text-2xl tracking-tight font-bold ml-2 font-display"
       >
         Gravity Room
       </h1>

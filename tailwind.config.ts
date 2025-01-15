@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["var(--font-averia-serif-libre)"],
+        body: ["var(--font-kiwi-maru"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

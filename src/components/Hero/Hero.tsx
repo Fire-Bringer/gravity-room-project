@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "@/styles/hero.css"
 
 const Hero = () => {
   return (
@@ -21,9 +22,10 @@ const Hero = () => {
           height={1440}
           className="bg-2"
         />
-        <h1>
+        <h1 className="title font-display">
           Gravity Room
         </h1>
+        {/*
         <Image
           src={"/images/Hero/left-hill.png"}
           alt="Image of a lake landscape"
@@ -59,6 +61,7 @@ const Hero = () => {
           height={1279}
           className="bg-7"
         />
+          */}
       </header>
     </div>
   );

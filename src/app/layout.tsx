@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Global/nav";
 import Footer from "@/components/Global/footer";
-import { Kiwi_Maru } from  "next/font/google";
+import { Kiwi_Maru, Averia_Serif_Libre } from  "next/font/google";
 import clsx from "clsx";
 
-const kiwi = Kiwi_Maru({ weight: ['400'] });
+// Font Configurations
+const kiwiMaru = Kiwi_Maru({
+  weight: ['400'],
+  variable: "--font-kiwi-maru",
+});
+
+const averiaSerifLibre = Averia_Serif_Libre({
+  weight: ["400"],
+  variable: "--font-averia-serif-libre",
+});
 
 export const metadata: Metadata = {
   title: "Gravity Room",
@@ -19,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(kiwi.className, 'm-0', 'h-screen', 'flex', 'flex-col')}>
+      <body className={clsx(kiwiMaru.variable, averiaSerifLibre.variable, 'm-0', 'h-screen', 'flex', 'flex-col')}>
         <NavBar/>
         <div className="grow bg-transparent">
           {children}
