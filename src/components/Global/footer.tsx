@@ -11,7 +11,7 @@ const Footer = () => {
             target="_blank"
           >
             <Image
-              src={"/images/spotify-line.svg"}
+              src={"/images/Icons/spotify-line.svg"}
               alt="Spotify Icon"
               width={30}
               height={30}
@@ -22,7 +22,7 @@ const Footer = () => {
         <li>
           <a href="https://www.instagram.com/yayoi0410/" target="_blank">
             <Image
-              src={"/images/instagram-line.svg"}
+              src={"/images/Icons/instagram-line.svg"}
               alt="Instagram Icon"
               width={30}
               height={30}
@@ -33,7 +33,7 @@ const Footer = () => {
         <li>
           <a href="https://www.youtube.com/@gravity_room" target="_blank">
             <Image
-              src={"/images/youtube-line.svg"}
+              src={"/images/Icons/youtube-line.svg"}
               alt="YouTube Icon"
               width={30}
               height={30}
@@ -44,7 +44,7 @@ const Footer = () => {
         <li>
           <a href="https://soundcloud.com/gravityroom4" target="_blank">
             <Image
-              src={"/images/soundcloud-line.svg"}
+              src={"/images/Icons/soundcloud-line.svg"}
               alt="SoundCloud Icon"
               width={30}
               height={30}

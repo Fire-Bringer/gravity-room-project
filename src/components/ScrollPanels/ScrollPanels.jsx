@@ -131,22 +131,22 @@ function scrollPanels() {
             <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">
               <li>
                 <a href="https://open.spotify.com/artist/3vbXUUQLZUwtRpagZ8cErD" target="_blank">
-                  <Image src={'/images/spotify-line.svg'} alt="Spotify Icon" width={48} height={48} />
+                  <Image src={'/images/Icons/spotify-line.svg'} alt="Spotify Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/yayoi0410/" target="_blank">
-                  <Image src={'/images/instagram-line.svg'} alt="Instagram Icon" width={48} height={48} />
+                  <Image src={'/images/Icons/instagram-line.svg'} alt="Instagram Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://www.youtube.com/@gravity_room" target="_blank">
-                  <Image src={'/images/youtube-line.svg'} alt="YouTube Icon" width={48} height={48} />
+                  <Image src={'/images/Icons/youtube-line.svg'} alt="YouTube Icon" width={48} height={48} />
                 </a>
               </li>
               <li>
                 <a href="https://soundcloud.com/gravityroom4" target="_blank">
-                  <Image src={'/images/soundcloud-line.svg'} alt="SoundCloud Icon" width={48} height={48} />
+                  <Image src={'/images/Icons/soundcloud-line.svg'} alt="SoundCloud Icon" width={48} height={48} />
                 </a>
               </li>
             </ul>

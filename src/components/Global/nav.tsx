@@ -38,13 +38,13 @@ const NavBar = () => {
       </div>
       <button className="lg:hidden">
         <Image
-          src={"/images/menu-3-line.svg"}
+          src={"/images/Icons/menu-3-line.svg"}
           alt="Burger Menu"
           width={30}
           height={30}
         />
         <Image
-          src={"/images/close-large-line.svg"}
+          src={"/images/Icons/close-large-line.svg"}
           alt="Burger Menu"
           width={30}
           height={30}
