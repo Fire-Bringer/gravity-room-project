@@ -19,13 +19,12 @@ const Hero = () => {
           src={"/images/Hero/mountain.png"}
           alt="Image of a mountain range"
           width={1920}
-          height={1440}
+          height={1080}
           className="bg-2"
         />
         <h1 className="title font-display">
           Gravity Room
         </h1>
-        {/*
         <Image
           src={"/images/Hero/left-hill.png"}
           alt="Image of a lake landscape"
@@ -53,7 +52,7 @@ const Hero = () => {
           width={1200}
           height={600}
           className="bg-6"
-        />
+          />
         <Image
           src={"/images/Hero/palm-foreground.png"}
           alt="Image a palmtree foreground silhouette"
@@ -61,7 +60,6 @@ const Hero = () => {
           height={1279}
           className="bg-7"
         />
-          */}
       </header>
     </div>
   );
