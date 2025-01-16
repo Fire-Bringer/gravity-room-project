@@ -90,7 +90,7 @@ const Videos = () => {
 
         <div id="photo-1" className="photo animation-show">
             <Image
-              src={"/images/moonview.webp"}
+              src={"/images/Photos/moonview.webp"}
               alt="Image of the moon at night"
               width={500}
               height={500}
@@ -100,7 +100,7 @@ const Videos = () => {
         </div>
         <div id="photo-2" className="photo animation-show">
             <Image
-              src={"/images/sunsetsky.webp"}
+              src={"/images/Photos/sunsetsky.webp"}
               alt="Image of the sunset"
               width={500}
               height={500}
@@ -110,7 +110,7 @@ const Videos = () => {
         </div>
         <div id="photo-3" className="photo animation-show">
             <Image
-              src={"/images/nightcap.webp"}
+              src={"/images/Photos/nightcap.webp"}
               alt="Image of a glass of champagne at night"
               width={500}
               height={500}
@@ -120,7 +120,7 @@ const Videos = () => {
         </div>
         <div id="photo-4" className="photo animation-show">
             <Image
-              src={"/images/flowerbush.webp"}
+              src={"/images/Photos/flowerbush.webp"}
               alt="Image of flowers"
               width={500}
               height={500}
@@ -130,7 +130,7 @@ const Videos = () => {
         </div>
         <div id="photo-5" className="photo animation-show">
             <Image
-              src={"/images/sunnytree.webp"}
+              src={"/images/Photos/sunnytree.webp"}
               alt="Image of a tree in the sun"
               width={500}
               height={500}
@@ -140,7 +140,7 @@ const Videos = () => {
         </div>
         <div id="photo-6" className="photo animation-show">
             <Image
-              src={"/images/beachfront.webp"}
+              src={"/images/Photos/beachfront.webp"}
               alt="Image of a beachfront"
               width={500}
               height={500}
