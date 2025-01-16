@@ -97,7 +97,7 @@ function scrollPanels() {
 
         <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] py-16 px-8">
 
-          <h2 className="section-title text-3xl mb-8 animation-show">
+          <h2 className="section-title text-3xl font-display mb-8 animation-show">
             Yayoi
           </h2>
 
