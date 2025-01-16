@@ -5,11 +5,11 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <nav className="fixed z-50 w-full h-[10vh] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b">
-      <h1
-        className="text-2xl tracking-tight font-bold ml-2 font-display"
+      <h6
+        className="tracking-tight font-bold ml-2 font-display"
       >
         Gravity Room
-      </h1>
+      </h6>
       <div className="desktop-menu gap-8 mr-2 hidden lg:flex">
         <a href="#Home">Home</a>
         <a href="#About">About</a>

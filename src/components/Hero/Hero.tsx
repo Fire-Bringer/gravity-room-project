@@ -35,7 +35,7 @@ const Hero = () => {
           width={1920}
           height={1080}
           className="bg bg-2"
-          style={{ transform: `translateZ(-9000px) scale(1.9) translateY(${scrollPosition * 0.7}px)` }}
+          style={{ transform: `translateZ(-9000px) scale(1.9) translateY(${scrollPosition * 1}px)` }}
         />
         <Image
           src={"/images/Hero/left-hill.png"}
@@ -43,7 +43,7 @@ const Hero = () => {
           width={1920}
           height={1080}
           className="bg bg-3"
-          style={{ transform: `translateZ(-8000px) scale(1.8) translateY(${scrollPosition * 0.6}px)` }}
+          style={{ transform: `translateZ(-8000px) scale(1.8) translateY(${scrollPosition * 0.9}px)` }}
         />
         <Image
           src={"/images/Hero/right-hill.png"}
@@ -51,7 +51,7 @@ const Hero = () => {
           width={1920}
           height={904}
           className="bg bg-4"
-          style={{ transform: `translateZ(-6000px) scale(1.6) translateY(${scrollPosition * 0.5}px)` }}
+          style={{ transform: `translateZ(-6000px) scale(1.6) translateY(${scrollPosition * 0.8}px)` }}
         />
         <Image
           src={"/images/Hero/sunset-hill.png"}
@@ -59,7 +59,7 @@ const Hero = () => {
           width={1920}
           height={1080}
           className="bg bg-5"
-          style={{ transform: `translateZ(-4000px) scale(1.4) translateY(${scrollPosition * 0.4}px)` }}
+          style={{ transform: `translateZ(-4000px) scale(1.4) translateY(${scrollPosition * 0.7}px)` }}
         />
         <Image
           src={"/images/Hero/car-hill-1200.png"}
@@ -67,7 +67,7 @@ const Hero = () => {
           width={1200}
           height={600}
           className="bg bg-6"
-          style={{ transform: `translateZ(-2000px) scale(0.3) translateY(${scrollPosition * 0.6}px)` }}
+          style={{ transform: `translateZ(-2000px) scale(1) translateY(${scrollPosition * 0.3}px)` }}
         />
         <Image
           src={"/images/Hero/palm-foreground.png"}
@@ -79,7 +79,7 @@ const Hero = () => {
         />
         <h1
           className="title font-display"
-          style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.7}px)` }}
+          style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.9}px)` }}
         >
           Gravity Room
         </h1>

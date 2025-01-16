@@ -17,7 +17,7 @@ header {
 .title {
   position: absolute;
   top: 10%;
-  font-size: 3rem;
+  font-size: 2rem;
   text-shadow: 0 0 5px black;;
 }
 
@@ -49,10 +49,17 @@ header {
   bottom: -20rem;
 }
 .bg-6 {
-  transform: translateZ(-2000px) scale(0.3);
-  overflow-x: visible;
-  bottom: -12rem;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  bottom: 0;
 }
 .bg-7 {
   overflow-y: visible;
+}
+
+@media (min-height: 768px) {
+  .bg-6 {
+    width: 1000px;
+  }
 }
