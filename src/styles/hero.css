@@ -1,7 +1,6 @@
 .hero-wrapper {
   height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   perspective: 10000px;
 }
 
@@ -37,31 +36,23 @@ header {
   will-change: transform;
 }
 
-.bg-1 {
-  transform: translateZ(-10000px) scale(2);
-}
 .bg-2 {
-  transform: translateZ(-9000px) scale(1.9);
-  bottom: 35rem;
+  bottom: 15rem;
 }
 .bg-3 {
-  transform: translateZ(-8000px) scale(1.8);
-  bottom: 7rem;
+  bottom: 2rem;
 }
 .bg-4 {
-  transform: translateZ(-6000px) scale(1.6);
-  bottom: -13rem;
+  bottom: -25rem;
 }
 .bg-5 {
-  transform: translateZ(-4000px) scale(1.4);
-  bottom: -18rem;
+  bottom: -20rem;
 }
 .bg-6 {
   transform: translateZ(-2000px) scale(0.3);
   overflow-x: visible;
-  bottom: -15rem;
+  bottom: -12rem;
 }
 .bg-7 {
-  transform: translateZ(0px) scale(1);
   overflow-y: visible;
 }
