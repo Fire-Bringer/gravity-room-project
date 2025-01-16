@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="Home" className="hero-wrapper">
+    <div id="Home" className="hero-wrapper mt-12">
       <header>
         <Image
           src={"/images/Hero/earth-image.png"}
@@ -67,7 +67,7 @@ const Hero = () => {
           width={1200}
           height={600}
           className="bg bg-6"
-          style={{ transform: `translateZ(-2000px) scale(0.4) translateY(${scrollPosition * 0.5}px)` }}
+          style={{ transform: `translateZ(-2000px) scale(0.4) translateY(${scrollPosition * 0.6}px)` }}
         />
         <Image
           src={"/images/Hero/palm-foreground.png"}
@@ -77,7 +77,12 @@ const Hero = () => {
           className="bg bg-7"
           style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.01}px)` }}
         />
-        <h1 className="title font-display">Gravity Room</h1>
+        <h1
+          className="title font-display"
+          style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.7}px)` }}
+        >
+          Gravity Room
+        </h1>
       </header>
     </div>
   );
