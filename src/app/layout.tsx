@@ -7,11 +7,13 @@ import clsx from "clsx";
 
 // Font Configurations
 const kiwiMaru = Kiwi_Maru({
+  subsets: ['latin'],
   weight: ['400'],
   variable: "--font-kiwi-maru",
 });
 
 const averiaSerifLibre = Averia_Serif_Libre({
+  subsets: ['latin'],
   weight: ["400"],
   variable: "--font-averia-serif-libre",
 });
