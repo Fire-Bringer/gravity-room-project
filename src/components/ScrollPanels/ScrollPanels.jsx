@@ -95,36 +95,27 @@ function scrollPanels() {
         <div className="twinkling"></div>
         <div className="clouds"></div>
 
-        <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] p-8">
+        <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] py-16 px-8">
 
-          <h2 className="section-title mb-8 animation-show">
+          <h2 className="section-title text-3xl mb-8 animation-show">
             Yayoi
           </h2>
 
           <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
-          <p className="m-0 leading-normal mt-8 animation-show">
+          <p className="leading-normal mt-8 animation-show w-4/5">
             Gravity Roomにはいろんなものが集まってきます。
-            <br />
             私たちが重力によって地球に引っ張られているように・・
-            <br />
             そしてこの世界をいろいろな方法で冒険するのが、
-            <br />
             Gravity Roomのプロジェクトです。
-            <br />
             音楽、写真、動画、言葉、など。
-            <br />
             過ぎ去っていくその瞬間を記録するツールが溢れている時代に感謝。
             <br />
             <br />
             In Gravity Room, all things come together.
-            <br />
             Just as we are pulled toward the Earth by gravity itself...
-            <br />
             The Gravity Room project explores this world in a variety of ways.
-            <br />
             Through Music, Photos, Videos, Words… and more.
-            <br />
             It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
           </p>
           <div className="m-0 mt-8 flex animation-show">

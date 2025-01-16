@@ -4,7 +4,7 @@ import "@/styles/photos.css";
 
 const Videos = () => {
   return (
-    <section id="Videos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center mx[10vw]">
+    <section id="Videos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center py-16 mx[10vw]">
 
       {/* Starry Overlay */}
       <div className="stars"></div>

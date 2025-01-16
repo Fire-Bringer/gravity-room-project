@@ -21,7 +21,7 @@ const Contact = () => {
         <input type="hidden" name="_autoresponse" value="Thank you for your question! I'll get back to you as soon as possible!" />
           <input type="text" name="name" className="form-control contact-form-text block w-full box-border my-4 border-0 bg-[#111] py-5 px-10 outline-none duration-200" placeholder="Name" />
           <input type="email" name="email" className="form-control contact-form-text block w-full box-border my-4 border-0 bg-[#111] py-5 px-10 outline-none duration-200" placeholder="Email" />
-          <textarea name="message" className="form-control contact-form-text block w-full box-border my-4 border-0 bg-[#111] py-5 px-10 outline-none duration-200 resize-none h-[120px]" placeholder="Message"></textarea>
+          <textarea name="message" className="form-control contact-form-text block w-full box-border my-4 border-0 bg-[#111] py-5 px-10 outline-none duration-200 resize-none h-40" placeholder="Message"></textarea>
           <input type="submit" className="contact-form-btn float-right border-0 bg-[#da30a5fb] hover:bg-[#fc87d7fb] py-3 px-12 rounded-[20px] cursor-pointer duration-200 mb-12" value="Send" />
         </form>
 

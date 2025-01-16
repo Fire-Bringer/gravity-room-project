@@ -78,7 +78,7 @@ const Hero = () => {
           style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.01}px)` }}
         />
         <h1
-          className="title font-display"
+          className="title font-display drop-shadow"
           style={{ transform: `translateZ(1000px) scale(1) translateY(${scrollPosition * 0.9}px)` }}
         >
           Gravity Room
