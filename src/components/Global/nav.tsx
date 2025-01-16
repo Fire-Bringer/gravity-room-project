@@ -18,7 +18,7 @@ const NavBar = () => {
         <a href="#Music">Music</a>
         <a href="#Contact">Contact</a>
       </div>
-      <div className="mobile-menu bg-[#0f0e0e] mt-[72px] w-[50vw] h-[70vh] flex flex-col justify-around items-center absolute top-0 right-0 p-4 rounded-mobile-menu border-l border-b border-t z-[100] hidden">
+      <div className="mobile-menu bg-[#0f0e0e] w-[50vw] h-[70vh] lg:hidden hidden flex-col justify-around items-center absolute top-[60px] right-0 p-4 rounded-mobile-menu border-l border-b border-t z-50">
       <a href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#Videos">Videos</a>
