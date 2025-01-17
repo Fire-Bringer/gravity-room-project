@@ -12,9 +12,9 @@ const Contact = () => {
       <div className="twinkling"></div>
       <div className="clouds"></div>
 
-      <div className="relative z-10 pt-20">
+      <div className="font-body relative z-10 pt-20">
 
-        <h1 className="animation-show text-2xl text-center">Contact Me</h1>
+        <h1 className="font-display animation-show text-2xl text-center">Contact Me</h1>
         <div className="border animation-show w-24 h-[10px] bg-[#da30a5fb] my-4 mx-auto"></div>
         <form className="contact-form animation-show max-w-[1000px] m-auto px-[10vw] overflow-hidden" action="https://formsubmit.co/gravityroom4@gmail.com" method="post">
         <input type="hidden" name="_subject" value="GRAVITY Message" />

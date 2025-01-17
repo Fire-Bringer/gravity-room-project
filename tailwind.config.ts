@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         display: ["var(--font-averia-serif-libre)"],
-        body: ["var(--font-kiwi-maru"],
+        body: ["var(--font-kiwi-maru)"],
       },
       colors: {
         background: "var(--background)",

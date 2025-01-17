@@ -103,7 +103,7 @@ function scrollPanels() {
 
           <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
-          <p className="leading-normal mt-8 animation-show w-4/5">
+          <p className="font-body leading-normal mt-8 animation-show w-4/5">
             Gravity Roomにはいろんなものが集まってきます。
             私たちが重力によって地球に引っ張られているように・・
             そしてこの世界をいろいろな方法で冒険するのが、
@@ -142,7 +142,7 @@ function scrollPanels() {
               </li>
             </ul>
           </div>
-          <button className="bg-[#da30a5fb] px-8 py-4 rounded-[20px] mt-6 flex items-center justify-center animation-show">
+          <button className="font-body bg-[#da30a5fb] px-8 py-4 rounded-[20px] mt-6 flex items-center justify-center animation-show">
             <a href="#Contact" className="bg-inherit">
               Contact
             </a>
