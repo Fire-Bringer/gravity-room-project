@@ -1,5 +1,6 @@
 import ScrollAnimation from "@/components/ScrollAnimation/ScrollAnimation";
 import Hero from "@/components/Hero/Hero";
+import About from "@/components/About/About";
 import ScrollPanels from "@/components/ScrollPanels/ScrollPanels";
 import Videos from "@/components/Videos/Videos";
 import Music from "@/components/Music/Music";
@@ -12,6 +13,8 @@ const HomePage = () => {
       <ScrollAnimation>
 
         <Hero/>
+
+        <About/>
 
         <ScrollPanels/>
 
