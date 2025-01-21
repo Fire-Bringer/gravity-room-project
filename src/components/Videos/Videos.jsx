@@ -17,7 +17,7 @@ const Videos = () => {
 
         <div className="video-text w-full font-body">
           <h2 className="font-display text-3xl text-center lg:text-start mb-4">A Look In Sacramento, California</h2>
-          <p className="text-center">
+          <p className="text-center lg:text-start">
             カリフォルニア州の州都、サクラメント
           </p>
           <p>
@@ -49,7 +49,7 @@ const Videos = () => {
 
         <div className="video-text w-full">
           <h2 className="font-display text-3xl text-center lg:text-start mb-4">A Look In Krabi, Thailand</h2>
-          <p className="text-center">
+          <p className="text-center lg:text-start">
             タイのビーチリゾート地、クラビ
           </p>
           <p>
@@ -71,7 +71,7 @@ const Videos = () => {
 
         <div className="video-text w-full">
           <h2 className="font-display text-3xl text-center lg:text-start mb-4">A Look In Hoi An, Vietnam</h2>
-          <p className="text-center">
+          <p className="text-center lg:text-start">
             ベトナム、ホイアン
           </p>
           <p>
