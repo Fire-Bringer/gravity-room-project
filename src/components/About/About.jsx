@@ -11,7 +11,7 @@ async function getAboutContent() {
   return about.data
 }
 
-async function About () {
+async function About() {
   //Strapi API Integration
   const about = await getAboutContent()
   const aboutName = about.title
