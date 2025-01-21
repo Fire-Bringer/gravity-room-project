@@ -1,12 +1,12 @@
 import Image from "next/image";
 import "@/styles/about.css"
 import "@/styles/stars.css"
-import Markdown from "react-markdown";
+import HTMLReactParser from "html-react-parser/lib/index";
 
 // Strapi API Fetch Function
 
 async function getAboutContent() {
-  const aboutPromise = await fetch("http://localhost:1337/api/about")
+  const aboutPromise = await fetch("http://localhost:1337/api/about?populate=*")
   const about = await aboutPromise.json()
   return about.data
 }
@@ -15,10 +15,10 @@ async function About () {
   //Strapi API Integration
   const about = await getAboutContent()
   const aboutName = about.title
+  const aboutImg = about.image.url
   const aboutContent = about.description.flatMap(paragraph =>
     paragraph.children.map(child => child.text)
-  );
-  const markdown = `${aboutContent}`
+  ).join("<br /><br />");
 
   return (
     <section id="About" className="relative leading-none top-0 w-full min-h-screen mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
@@ -34,10 +34,10 @@ async function About () {
           {aboutName}
         </h2>
 
-        <Image src="/images/gravityroom-logo.jpg" alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
+        <img src={`http://localhost:1337${aboutImg}`} alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
-        <p className="font-body leading-normal mt-8 animation-show w-4/5">
-          {aboutContent}
+        <p className="about-contents font-body leading-normal mt-8 animation-show w-4/5">
+          {HTMLReactParser(aboutContent)}
         </p>
         <div className="m-0 mt-8 flex animation-show">
           <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">
