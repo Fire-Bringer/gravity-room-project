@@ -52,14 +52,15 @@ header {
   width: 100vw;
   height: auto;
   object-fit: cover;
-  bottom: 0;
+  bottom: -1rem;
 }
 .bg-7 {
   overflow-y: visible;
 }
 
-@media (min-height: 768px) {
+@media (min-width: 768px) {
   .bg-6 {
     width: 1000px;
+    bottom: -8rem;
   }
 }

@@ -67,7 +67,7 @@ const Hero = () => {
           width={1200}
           height={600}
           className="bg bg-6"
-          style={{ transform: `translateZ(-2000px) scale(1) translateY(${scrollPosition * 0.3}px)` }}
+          style={{ transform: `translateZ(-2000px) scale(0.5) translateY(${scrollPosition * 0.5}px)` }}
         />
         <Image
           src={"/images/Hero/palm-foreground.png"}
