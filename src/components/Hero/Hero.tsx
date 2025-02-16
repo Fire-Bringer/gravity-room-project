@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import "@/styles/hero.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 
 const Hero = () => {
   const [scrollPosition, setScrollPosition] = useState(0);

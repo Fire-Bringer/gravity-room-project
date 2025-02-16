@@ -3,7 +3,8 @@ import Image from "next/image";
 import '@/styles/intro.css';
 import gsap from "gsap";
 import { useRef, useEffect } from 'react';
-import Hero from "../Hero/Hero";
+import Navbar from "../Global/nav";
+import Hero from "@/components/Hero/Hero";
 
 const Intro = () => {
 
@@ -11,6 +12,8 @@ const Intro = () => {
   const preloaderRef = useRef(null);
   const introDivRef = useRef(null);
   const introImgRefs = useRef([]);
+  const navCompRef = useRef([]);
+  const heroCompRef = useRef([]);
 
   const addIntroImgRef = (el) => {
     if (el && !introImgRefs.current.includes(el)) {
@@ -30,27 +33,27 @@ const Intro = () => {
 
   useEffect(() => {
 
-    gsap.to(".progress-bar", {
+    gsap.to(progressBarRef.current, {
       width: "30%",
       duration: 2,
       ease: "power4.inOut",
       delay: 2,
     });
 
-    gsap.to(".progress-bar", {
+    gsap.to(progressBarRef.current, {
       width: "100%",
       opacity: 0,
       duration: 2,
       delay: 3.5,
       ease: "power3.out",
       onComplete: () => {
-        gsap.set(".pre-loader", {
+        gsap.set(preloaderRef.current, {
           display: "none",
         });
       },
     });
 
-    gsap.to(".intro-imgs > img", {
+    gsap.to(introImgRefs.current, {
       clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
       duration: 1,
       ease: "power4.inOut",
@@ -58,26 +61,34 @@ const Intro = () => {
       delay: 4,
     });
 
-    gsap.to(".intro", {
+    gsap.to(introDivRef.current, {
       scale: 1.3,
       duration: 3,
       ease: "power3.inOut",
       delay: 4,
     });
 
-    gsap.to(".intro", {
+    gsap.to(introDivRef.current, {
       opacity: 0,
       duration: 4,
       ease: "power3.inOut",
       delay: 4,
     });
 
-    gsap.to(".hero-content", {
+    gsap.to(navCompRef.current, {
+      opacity: 1,
+      duration: 3,
+      ease: "power1.inOut",
+      delay: 8,
+    });
+
+    gsap.to(heroCompRef.current, {
       opacity: 1,
       duration: 4,
       ease: "power3.inOut",
       delay: 5,
     });
+
 
   }, []);
 
@@ -92,7 +103,7 @@ const Intro = () => {
             src='/images/new-car.png'
             alt="Loader car svg"
             width={200}
-            height={200}
+            height={83.5}
             color="red"
           />
 
@@ -109,7 +120,6 @@ const Intro = () => {
               alt={image.alt}
               width={1920}
               height={1000}
-              objectFit="cover"
               className="intro-img"
               ref={addIntroImgRef}
             />
@@ -119,10 +129,14 @@ const Intro = () => {
 
       </div>
 
-      <div className="hero-content opacity-0">
+      <div className="hero-content">
+        <div className="navbar fixed" ref={navCompRef}>
+          <Navbar/>
+        </div>
+        <div className="hero-component" ref={heroCompRef}>
           <Hero/>
+        </div>
       </div>
-
 
     </section>
   );

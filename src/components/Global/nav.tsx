@@ -1,10 +1,9 @@
 "use client";
-//import TransitionLink from "../TransitionLink";
 import Image from "next/image";
 
 const NavBar = () => {
   return (
-    <nav className="fixed z-50 w-full h-[10vh] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b">
+    <nav className="fixed z-50 w-full h-[5.625rem] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b">
       <h6
         className="tracking-tight text-lg font-bold ml-2 font-display"
       >
