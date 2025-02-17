@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/Global/nav";
 import Footer from "@/components/Global/footer";
 import { Kiwi_Maru, Averia_Serif_Libre } from  "next/font/google";
 import clsx from "clsx";
@@ -27,9 +28,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={clsx(kiwiMaru.variable, averiaSerifLibre.variable, 'm-0', 'h-screen', 'flex', 'flex-col')}>
+        <NavBar/>
         <div className="grow bg-transparent">
           {children}
         </div>

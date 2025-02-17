@@ -5,13 +5,21 @@ import gsap from "gsap";
 
 const NavBar = () => {
 
+  const navRef = useRef(null);
   const mobileNavRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const tl = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    gsap.to(navRef.current, {
+      opacity: 1,
+      duration: 3,
+      delay: 10
+    })
+  }, []);
 
   useEffect(() => {
     gsap.set(mobileNavRef.current, { x: 200, opacity: 0 }); // Set initial position only once
@@ -37,7 +45,7 @@ const NavBar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed z-50 w-full h-[5.625rem] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b">
+    <nav className="nav fixed z-50 w-full h-[5.625rem] p-5 flex flex-row place-items-center justify-between bg-[#0f0e0e] text-white border-b opacity-0" ref={navRef}>
       <h6
         className="tracking-tight text-lg font-bold ml-2 font-display"
       >

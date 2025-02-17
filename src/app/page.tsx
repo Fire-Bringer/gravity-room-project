@@ -7,6 +7,7 @@ import Music from "@/components/Music/Music";
 import Contact from "@/components/Contact/Contact";
 
 const HomePage = () => {
+
   return (
     <main>
 

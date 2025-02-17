@@ -56,7 +56,7 @@ header {
 }
 .bg-7 {
   overflow: hidden;
-  bottom: 4rem;
+  bottom: 2rem;
 }
 
 @media (min-width: 768px) {

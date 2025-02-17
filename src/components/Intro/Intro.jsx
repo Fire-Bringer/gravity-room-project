@@ -3,7 +3,6 @@ import Image from "next/image";
 import '@/styles/intro.css';
 import gsap from "gsap";
 import { useRef, useEffect } from 'react';
-import Navbar from "../Global/nav";
 import Hero from "@/components/Hero/Hero";
 
 const Intro = () => {
@@ -23,10 +22,9 @@ const Intro = () => {
   const preloaderRef = useRef(null);
   const introDivRef = useRef(null);
   const introImgRefs = useRef([]);
-  const navCompRef = useRef([]);
-  const heroCompRef = useRef([]);
-  const carRef = useRef([]);
-  const quoteRef = useRef([]);
+  const heroCompRef = useRef(null);
+  const carRef = useRef(null);
+  const quoteRef = useRef(null);
 
   const addIntroImgRef = (el) => {
     if (el && !introImgRefs.current.includes(el)) {
@@ -123,13 +121,6 @@ const Intro = () => {
       delay: 6,
     });
 
-    gsap.to(navCompRef.current, {
-      opacity: 1,
-      duration: 3,
-      ease: "power1.inOut",
-      delay: 10,
-    });
-
     gsap.to(heroCompRef.current, {
       opacity: 1,
       duration: 4,
@@ -184,9 +175,6 @@ const Intro = () => {
       </div>
 
       <div className="hero-content">
-        <div className="navbar fixed" ref={navCompRef}>
-          <Navbar/>
-        </div>
         <div className="hero-component" ref={heroCompRef}>
           <Hero/>
         </div>

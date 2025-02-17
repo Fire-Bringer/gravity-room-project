@@ -20,7 +20,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="Home" className="hero-wrapper mt-12">
+    <div id="Home" className="hero-wrapper">
       <header>
         <Image
           src={"/images/Hero/earth-image.png"}
