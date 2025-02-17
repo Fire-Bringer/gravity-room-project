@@ -50,6 +50,12 @@ const Intro = () => {
       ease: "power1.inOut"
     });
 
+    gsap.to(carRef.current, {
+      opacity: 1,
+      duration: 2,
+      ease: "power1.inOut"
+    });
+
     gsap.to(quoteRef.current, {
       y: 15, // Moves the element up and down
       duration: 3,
@@ -142,7 +148,7 @@ const Intro = () => {
             <p>Why fear the unknown...when you can embrace it?</p>
           </div>
 
-          <div className="w-32 md:w-40" ref={carRef}>
+          <div className="w-32 md:w-40 opacity-0" ref={carRef}>
             <Image
               src='/images/convertible.png'
               alt="Loader car svg"
