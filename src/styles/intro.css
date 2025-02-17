@@ -3,6 +3,8 @@
   height: 100vh;
   overflow: hidden;
   background: #0f0e0e;
+  overflow: hidden;
+  z-index: 99;
 }
 
 .intro-img {
@@ -32,6 +34,14 @@
   gap: 0.5em;
   overflow: hidden;
   z-index: 2;
+}
+
+.intro-quote {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .progress-bar {

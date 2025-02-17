@@ -52,15 +52,22 @@ header {
   width: 100vw;
   height: auto;
   object-fit: cover;
-  bottom: -1rem;
+  bottom: 5rem;
 }
 .bg-7 {
-  overflow-y: visible;
+  overflow: hidden;
+  bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .bg-6 {
     width: 1000px;
-    bottom: -8rem;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bg-6 {
+    bottom: -5rem;
   }
 }

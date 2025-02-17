@@ -7,6 +7,7 @@ const Hero = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
@@ -67,7 +68,7 @@ const Hero = () => {
           width={1200}
           height={600}
           className="bg bg-6"
-          style={{ transform: `translateZ(-2000px) scale(0.5) translateY(${scrollPosition * 0.5}px)` }}
+          style={{ transform: `translateZ(-2000px) scale(0.8) translateY(${scrollPosition * 0.5}px)` }}
         />
         <Image
           src={"/images/Hero/palm-foreground.png"}
