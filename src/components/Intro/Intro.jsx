@@ -79,12 +79,6 @@ const Intro = () => {
       yoyo: true // Reverses animation back and forth
     });
 
-    gsap.to(carRef.current, {
-      y: -20,
-      duration: 4,
-      ease: "elastic.in(1.75, 0.75)"
-    });
-
     gsap.to(progressBarRef.current, {
       width: "30%",
       duration: 2,
