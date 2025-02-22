@@ -50,8 +50,10 @@ jobs:
         if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build and Export
+        run: |
+          npm run build
+          npm run export
 
       - name: Zip artifact for upload
         run: cd out && zip ../out.zip . -r
@@ -101,8 +103,10 @@ jobs:
         if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build and Export
+        run: |
+          npm run build
+          npm run export
 
       - name: Zip artifact for upload
         run: cd out && zip ../out.zip . -r
