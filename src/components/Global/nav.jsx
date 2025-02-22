@@ -27,9 +27,9 @@ const NavBar = () => {
       const targetY = targetElement.offsetTop + offset; // Calculate adjusted y position
 
       gsap.to(window, {
-        duration: 3,
+        duration: 5,
         scrollTo: { y: targetY, autoKill: false },
-        ease: "power3.inOut",
+        ease: "power1.inOut",
       });
     } else {
       console.error(`Element with id "${targetId}" not found!`); // For debugging
