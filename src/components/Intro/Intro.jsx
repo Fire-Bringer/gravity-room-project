@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import '@/styles/intro.css';
 import gsap from "gsap";
 import { useRef, useEffect } from 'react';
@@ -159,7 +158,7 @@ const Intro = () => {
         <div className="intro-imgs">
 
           {introImages.map((image) => (
-            <Image
+            <img
               key={image.src}
               src={image.src}
               alt={image.alt}
