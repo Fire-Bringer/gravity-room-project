@@ -29,7 +29,7 @@ const NavBar = () => {
       gsap.to(window, {
         duration: 3,
         scrollTo: { y: targetY, autoKill: false },
-        ease: "power1.inOut",
+        ease: "power3.inOut",
       });
     } else {
       console.error(`Element with id "${targetId}" not found!`); // For debugging
