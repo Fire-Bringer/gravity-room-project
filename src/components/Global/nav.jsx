@@ -85,7 +85,7 @@ const NavBar = () => {
       <div className="desktop-menu font-body gap-8 mr-2 hidden lg:flex">
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -50)}> {/* Example: 100px above */}
+            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
               <Link href={link.path}>
                 {link.label}
               </Link>
@@ -96,7 +96,7 @@ const NavBar = () => {
       <div className="mobile-menu font-body bg-[#0f0e0e] w-[40vw] h-[70vh] lg:hidden flex flex-col justify-around items-center absolute top-[5.625rem] right-0 p-4 rounded-mobile-menu border-l border-b z-50" ref={mobileNavRef}>
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -50)}> {/* Example: 100px above */}
+            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
               <Link href={link.path}>
                 {link.label}
               </Link>
