@@ -143,7 +143,7 @@ const Intro = () => {
           </div>
 
           <div className="w-32 md:w-40 opacity-0" ref={carRef}>
-            <Image
+            <img
               src='/images/convertible.png'
               alt="Loader car svg"
               width={200.5}
