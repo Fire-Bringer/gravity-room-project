@@ -23,7 +23,7 @@ const Hero = () => {
     <div id="Home" className="hero-wrapper">
       <header>
         <Image
-          src={"/images/Hero/earth-image.png"}
+          src="/images/Hero/earth-image.png"
           alt="Image of earth in space"
           width={1920}
           height={1080}
