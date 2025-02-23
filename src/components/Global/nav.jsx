@@ -87,7 +87,9 @@ const NavBar = () => {
         {navLinks.map((link, index) => (
           <div key={index}>
             <div onClick={() => handleNavLinkClick(link.targetId, -100, e)}> {/* Example: 100px above */}
-              {link.label}
+              <Link href={link.path}>
+                {link.label}
+              </Link>
             </div>
           </div>
         ))}
@@ -96,7 +98,9 @@ const NavBar = () => {
         {navLinks.map((link, index) => (
           <div key={index}>
             <div onClick={() => handleNavLinkClick(link.targetId, -100, e)}> {/* Example: 100px above */}
-              {link.label}
+              <Link href={link.path}>
+                {link.label}
+              </Link>
             </div>
           </div>
         ))}
