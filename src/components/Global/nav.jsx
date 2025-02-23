@@ -19,7 +19,8 @@ const navLinks = [
 const NavBar = () => {
 
   // Handle to set offset on y access to navigate above the targeted section IDs
-  const handleNavLinkClick = (targetId, offset = 0) => {
+  const handleNavLinkClick = (targetId, offset = 0, e) => {
+    e.preventDefault(); // Prevent default link behavior
     toggleMenu();
 
     const targetElement = document.getElementById(targetId);
@@ -85,10 +86,8 @@ const NavBar = () => {
       <div className="desktop-menu font-body gap-8 mr-2 hidden lg:flex">
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
-              <Link href={link.path}>
-                {link.label}
-              </Link>
+            <div onClick={() => handleNavLinkClick(link.targetId, -100, e)}> {/* Example: 100px above */}
+              {link.label}
             </div>
           </div>
         ))}
@@ -96,10 +95,8 @@ const NavBar = () => {
       <div className="mobile-menu font-body bg-[#0f0e0e] w-[40vw] h-[70vh] lg:hidden flex flex-col justify-around items-center absolute top-[5.625rem] right-0 p-4 rounded-mobile-menu border-l border-b z-50" ref={mobileNavRef}>
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
-              <Link href={link.path}>
-                {link.label}
-              </Link>
+            <div onClick={() => handleNavLinkClick(link.targetId, -100, e)}> {/* Example: 100px above */}
+              {link.label}
             </div>
           </div>
         ))}
