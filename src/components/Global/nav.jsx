@@ -19,8 +19,7 @@ const navLinks = [
 const NavBar = () => {
 
   // Handle to set offset on y access to navigate above the targeted section IDs
-  const handleNavLinkClick = (targetId, offset = 0, e) => {
-    e.preventDefault(); // Prevent default link behavior
+  const handleNavLinkClick = (targetId, offset = 0) => {
     toggleMenu();
 
     const targetElement = document.getElementById(targetId);
@@ -30,6 +29,7 @@ const NavBar = () => {
       gsap.to(window, {
         duration: 2,
         scrollTo: { y: targetY, autoKill: false },
+        ease: "power1.inOut",
       });
     } else {
       console.error(`Element with id "${targetId}" not found!`); // For debugging
@@ -85,7 +85,7 @@ const NavBar = () => {
       <div className="desktop-menu font-body gap-8 mr-2 hidden lg:flex">
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
+            <div onClick={() => handleNavLinkClick(link.targetId, -75)}> {/* Example: 100px above */}
               <Link href={link.path}>
                 {link.label}
               </Link>
@@ -96,7 +96,7 @@ const NavBar = () => {
       <div className="mobile-menu font-body bg-[#0f0e0e] w-[40vw] h-[70vh] lg:hidden flex flex-col justify-around items-center absolute top-[5.625rem] right-0 p-4 rounded-mobile-menu border-l border-b z-50" ref={mobileNavRef}>
         {navLinks.map((link, index) => (
           <div key={index}>
-            <div onClick={() => handleNavLinkClick(link.targetId, -100)}> {/* Example: 100px above */}
+            <div onClick={() => handleNavLinkClick(link.targetId, -75)}> {/* Example: 100px above */}
               <Link href={link.path}>
                 {link.label}
               </Link>
