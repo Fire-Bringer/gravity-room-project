@@ -1,6 +1,7 @@
 "use client";
 import "@/styles/hero.css";
 import { useState, useEffect} from "react";
+import Image from "next/image";
 
 const Hero = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -21,7 +22,7 @@ const Hero = () => {
   return (
     <div id="Home" className="hero-wrapper">
       <header>
-        <img
+        <Image
           src="/images/Hero/earth-image.png"
           alt="Image of earth in space"
           width={1920}
@@ -29,7 +30,7 @@ const Hero = () => {
           className="bg bg-1"
           style={{ transform: `translateZ(-10000px) scale(2) translateY(${scrollPosition * 0.1}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/mountain.png"}
           alt="Image of a mountain range"
           width={1920}
@@ -37,7 +38,7 @@ const Hero = () => {
           className="bg bg-2"
           style={{ transform: `translateZ(-9000px) scale(1.9) translateY(${scrollPosition * 1}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/left-hill.png"}
           alt="Image of a lake landscape"
           width={1920}
@@ -45,7 +46,7 @@ const Hero = () => {
           className="bg bg-3"
           style={{ transform: `translateZ(-8000px) scale(1.8) translateY(${scrollPosition * 0.9}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/right-hill.png"}
           alt="Image of an autumn landscape"
           width={1920}
@@ -53,7 +54,7 @@ const Hero = () => {
           className="bg bg-4"
           style={{ transform: `translateZ(-6000px) scale(1.6) translateY(${scrollPosition * 0.8}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/sunset-hill.png"}
           alt="Image of hilly road"
           width={1920}
@@ -61,7 +62,7 @@ const Hero = () => {
           className="bg bg-5"
           style={{ transform: `translateZ(-4000px) scale(1.4) translateY(${scrollPosition * 0.7}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/car-hill-1200.png"}
           alt="Image of a vintage car"
           width={1200}
@@ -69,7 +70,7 @@ const Hero = () => {
           className="bg bg-6"
           style={{ transform: `translateZ(-2000px) scale(0.8) translateY(${scrollPosition * 0.5}px)` }}
         />
-        <img
+        <Image
           src={"/images/Hero/palm-foreground.png"}
           alt="Image a palmtree foreground silhouette"
           width={1920}
