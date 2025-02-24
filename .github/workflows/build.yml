@@ -14,12 +14,10 @@ concurrency:
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
-
     name: Build(pullreq)
     if: (github.repository == 'Fire-Bringer/gravity-room-project' && github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/kuroco stage') && github.event.issue.pull_request != null)
     runs-on: ubuntu-latest
     steps:
-
       - name: "Get branch name and sha"
         id: get_branch
         run: |
@@ -43,8 +41,10 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ steps.get_branch.outputs.branch }}-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            **/node_modules
+            .next/cache
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ steps.get_branch.outputs.branch }}-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml', 'next.config.js', '**/next-env.d.ts', '**/.eslintrc.json') }}
 
       - name: Install dependencies
         if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
@@ -74,12 +74,11 @@ jobs:
           data: '{"single_zip":"1","domain":"gravity-room.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
 
   #for Push
-  pushed_build:
+pushed_build:
     name: Build(pushed)
     if: (github.repository == 'Fire-Bringer/gravity-room-project' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch'))
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout Repo
         uses: actions/checkout@v4
 
@@ -94,8 +93,10 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.BRANCH }}-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            **/node_modules
+            .next/cache
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.ref_name }}-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml', 'next.config.js', '**/next-env.d.ts', '**/.eslintrc.json') }}
 
       - name: Install dependencies
         if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
