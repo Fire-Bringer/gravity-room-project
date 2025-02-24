@@ -2,7 +2,14 @@ import Image from "next/image";
 import "@/styles/about.css"
 import "@/styles/stars.css"
 
-const About = () => {
+async function getData() {
+  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/3/about/3');
+  return res.json()
+}
+
+async function About() {
+
+  const data = await getData()
 
   return (
     <section id="About" className="relative leading-none top-0 w-full min-h-screen mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
@@ -15,15 +22,15 @@ const About = () => {
       <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] py-16 px-8">
 
         <h2 className="section-title text-3xl font-display mb-8 animation-show">
-          Yayoi
+          {data.details.ext_1.ext_1}
         </h2>
 
-        <img src='/images/gravityroom-logo.jpg' alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
+        <img src={data.details.ext_1.ext_2} alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
         <p className="about-contents font-body leading-normal mt-8 animation-show w-4/5">
-          Gravity Roomにはいろんなものが集まってきます。私たちが重力によって地球に引っ張られているように・・そしてこの世界をいろいろな方法で冒険するのが、Gravity Roomのプロジェクトです。音楽、写真、動画、言葉、など。過ぎ去っていくその瞬間を記録するツールが溢れている時代に感謝。
+          {data.details.ext_1.ext_3}
           <br /> <br />
-          In Gravity Room, all things come together. Just as we are pulled toward the Earth by gravity itself... The Gravity Room project explores this world in a variety of ways. Through Music, Photos, Videos, Words… and more. It is a blessing and reminder that we have the tools to record the moments that are constantly passing away.
+          {data.details.ext_1.ext_4}
         </p>
         <div className="m-0 mt-8 flex animation-show">
           <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">

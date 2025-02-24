@@ -1,7 +1,31 @@
 import "@/styles/stars.css";
 import "@/styles/photos.css";
 
-const Photos = () => {
+async function getData() {
+  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/5/photos/6');
+  return res.json()
+}
+
+async function Photos() {
+
+  const data = await getData()
+
+  // Extract Definitions
+  const titles = [];
+  const images = [];
+  const descriptions = [];
+
+  data?.details?.title.forEach((item) => {
+    titles.push(item.title)
+  });
+
+  data?.details?.title.forEach((item) => {
+    images.push(item.image)
+  });
+
+  data?.details?.title.forEach((item) => {
+    descriptions.push(item.description)
+  });
 
   return (
     <section id="Photos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center py-16 mx[10vw]">
@@ -15,63 +39,63 @@ const Photos = () => {
 
         <div id="photo-1" className="photo animation-show">
             <img
-              src="/images/Photos/moonview.webp"
+              src={images[0]}
               alt="Image of the moon at night"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Moonview</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[0]}</h3>
+            <p>{descriptions[0]}</p>
         </div>
         <div id="photo-2" className="photo animation-show">
             <img
-              src="/images/Photos/sunsetsky.webp"
+              src={images[1]}
               alt="Image of the sunset"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Sunset Sky</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[1]}</h3>
+            <p>{descriptions[1]}</p>
         </div>
         <div id="photo-3" className="photo animation-show">
             <img
-              src="/images/Photos/nightcap.webp"
+              src={images[2]}
               alt="Image of a glass of champagne at night"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Nightcap</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[2]}</h3>
+            <p>{descriptions[2]}</p>
         </div>
         <div id="photo-4" className="photo animation-show">
             <img
-              src="/images/Photos/flowerbush.webp"
+              src={images[3]}
               alt="Image of flowers"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Morning Glow</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[3]}</h3>
+            <p>{descriptions[3]}</p>
         </div>
         <div id="photo-5" className="photo animation-show">
             <img
-              src="/images/Photos/sunnytree.webp"
+              src={images[4]}
               alt="Image of a tree in the sun"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Sunny Tree</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[4]}</h3>
+            <p>{descriptions[4]}</p>
         </div>
         <div id="photo-6" className="photo animation-show">
             <img
-              src="/images/Photos/beachfront.webp"
+              src={images[5]}
               alt="Image of a beachfront"
               width={500}
               height={500}
             />
-            <h3 className="font-display">Beachfront</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo illum similique quia unde repellendus nemo labore impedit enim necessitatibus totam. Distinctio expedita voluptates, repellendus optio voluptas vero laudantium necessitatibus porro!</p>
+            <h3 className="font-display">{titles[5]}</h3>
+            <p>{descriptions[5]}</p>
         </div>
       </div>
 
