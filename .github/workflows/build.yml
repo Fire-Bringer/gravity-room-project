@@ -74,7 +74,7 @@ jobs:
           data: '{"single_zip":"1","domain":"gravity-room.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
 
   #for Push
-pushed_build:
+  pushed_build:
     name: Build(pushed)
     if: (github.repository == 'Fire-Bringer/gravity-room-project' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch'))
     runs-on: ubuntu-latest
