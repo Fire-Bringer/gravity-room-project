@@ -2,14 +2,7 @@ import Image from "next/image";
 import "@/styles/about.css"
 import "@/styles/stars.css"
 
-async function getData() {
-  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/3/about/3');
-  return res.json()
-}
-
-async function About() {
-
-  const data = await getData()
+const About = ({about}) => {
 
   return (
     <section id="About" className="relative leading-none top-0 w-full min-h-screen mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
@@ -22,15 +15,15 @@ async function About() {
       <div id="about-content" className="relative z-10 flex flex-col items-center max-w-[600px] py-16 px-8">
 
         <h2 className="section-title text-3xl font-display mb-8 animation-show">
-          {data.details.ext_1.ext_1}
+          {about.details.ext_1.ext_1}
         </h2>
 
-        <img src={data.details.ext_1.ext_2} alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
+        <img src={about.details.ext_1.ext_2} alt="Gravity Room Logo" width={150} height={150}  className="about-img rounded-full animation-show"/>
 
         <p className="about-contents font-body leading-normal mt-8 animation-show w-4/5">
-          {data.details.ext_1.ext_3}
+          {about.details.ext_1.ext_3}
           <br /> <br />
-          {data.details.ext_1.ext_4}
+          {about.details.ext_1.ext_4}
         </p>
         <div className="m-0 mt-8 flex animation-show">
           <ul className="flex flex-row justify-center w-full gap-4 md:gap-10">

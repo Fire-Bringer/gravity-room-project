@@ -1,14 +1,7 @@
 import "@/styles/stars.css";
 import "@/styles/photos.css";
 
-async function getData() {
-  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/4/videos/4');
-  return res.json()
-}
-
-async function Videos() {
-
-  const data = await getData();
+const Videos = ( {videos} ) => {
 
   // Extract Definitions
   const titles = [];
@@ -17,23 +10,23 @@ async function Videos() {
   const ENGs = [];
   const Links = [];
 
-  data?.details?.title.forEach((item) => {
+  videos?.details?.title.forEach((item) => {
     titles.push(item.title)
   });
 
-  data?.details?.title.forEach((item) => {
+  videos?.details?.title.forEach((item) => {
     subtitles.push(item.subtitle)
   });
 
-  data?.details?.title.forEach((item) => {
+  videos?.details?.title.forEach((item) => {
     JAPs.push(item.jap)
   });
 
-  data?.details?.title.forEach((item) => {
+  videos?.details?.title.forEach((item) => {
     ENGs.push(item.eng)
   });
 
-  data?.details?.title.forEach((item) => {
+  videos?.details?.title.forEach((item) => {
     Links.push(item.link.url)
   });
 

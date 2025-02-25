@@ -1,29 +1,22 @@
 import "@/styles/stars.css";
 import "@/styles/photos.css";
 
-async function getData() {
-  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/5/photos/6');
-  return res.json()
-}
-
-async function Photos() {
-
-  const data = await getData()
+const Photos = ( {photos} ) => {
 
   // Extract Definitions
   const titles = [];
   const images = [];
   const descriptions = [];
 
-  data?.details?.title.forEach((item) => {
+  photos?.details?.title.forEach((item) => {
     titles.push(item.title)
   });
 
-  data?.details?.title.forEach((item) => {
+  photos?.details?.title.forEach((item) => {
     images.push(item.image)
   });
 
-  data?.details?.title.forEach((item) => {
+  photos?.details?.title.forEach((item) => {
     descriptions.push(item.description)
   });
 
