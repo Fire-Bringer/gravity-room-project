@@ -9,29 +9,25 @@ import Contact from "@/components/Contact/Contact";
 import 'server-only';
 
 async function getData() {
-  // Fetch data
-  const resAbout = await fetch(process.env.BASE_URL + '/rcms-api/3/about/3');
-  const about = await resAbout.json();
+  const endpoints = [
+    { key: 'about', url: '/rcms-api/3/about/3' },
+    { key: 'videos', url: '/rcms-api/4/videos/4' },
+    { key: 'photos', url: '/rcms-api/5/photos/6' }
+  ];
 
-  const resVideos = await fetch(process.env.BASE_URL + '/rcms-api/4/videos/4');
-  const videos = await resVideos.json();
+  const fetchPromises = endpoints.map(endpoint =>
+    fetch(process.env.BASE_URL + endpoint.url).then(res => res.json())
+  );
 
-  const resPhotos = await fetch(process.env.BASE_URL + '/rcms-api/5/photos/6');
-  const photos = await resPhotos.json();
+  const [about, videos, photos] = await Promise.all(fetchPromises);
 
-  const data = [about, videos, photos]
-
-  return data
+  return { about, videos, photos };
 }
 
 
 async function HomePage() {
 
-  const data = await getData()
-
-  const about = data[0]
-  const videos = data[1]
-  const photos = data[2]
+  const { about, videos, photos } = await getData();
 
   return (
     <main>
