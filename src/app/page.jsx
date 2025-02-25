@@ -6,16 +6,17 @@ import Videos from "@/components/Videos/Videos";
 import Photos from "@/components/Photos/Photos";
 import Music from "@/components/Music/Music";
 import Contact from "@/components/Contact/Contact";
+import 'server-only';
 
 async function getData() {
   // Fetch data
-  const resAbout = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/3/about/3');
+  const resAbout = await fetch(process.env.BASE_URL + '/rcms-api/3/about/3');
   const about = await resAbout.json();
 
-  const resVideos = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/4/videos/4');
+  const resVideos = await fetch(process.env.BASE_URL + '/rcms-api/4/videos/4');
   const videos = await resVideos.json();
 
-  const resPhotos = await fetch(process.env.NEXT_PUBLIC_BASE_URL + '/rcms-api/5/photos/6');
+  const resPhotos = await fetch(process.env.BASE_URL + '/rcms-api/5/photos/6');
   const photos = await resPhotos.json();
 
   const data = [about, videos, photos]
