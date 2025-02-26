@@ -6,6 +6,8 @@ import Videos from "@/components/Videos/Videos";
 import Photos from "@/components/Photos/Photos";
 import Music from "@/components/Music/Music";
 import Contact from "@/components/Contact/Contact";
+
+// Installed to make sure this page runs in server
 import 'server-only';
 
 async function getData() {
