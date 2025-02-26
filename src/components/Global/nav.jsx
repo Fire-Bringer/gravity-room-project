@@ -28,10 +28,12 @@ const NavBar = () => {
     if (isMenuOpen) setIsMenuOpen(false);
 
     const targetElement = document.getElementById(targetId);
+    
     if (targetElement) {
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
       gsap.to(window, {
         duration: 3,
-        scrollTo: { y: targetElement.offsetTop + offset, autoKill: true },
+        scrollTo: { y: targetPosition + offset, autoKill: true },
         ease: "power2.inOut",
       });
     } else {
