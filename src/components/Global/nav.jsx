@@ -48,12 +48,12 @@ const NavBar = () => {
 
           // Use a more reliable approach with a fallback
           gsap.to(window, {
-            duration: 1.5, // Shorter duration for better reliability
+            duration: 3, // Longer duration for smoother scrolling
             scrollTo: {
               y: targetPosition + offset,
               autoKill: false, // Changed to false to prevent early termination
             },
-            ease: "power1.inOut", // Using a simpler easing function
+            ease: "power2.inOut", // Easing function
             onUpdate: () => {
               // Optional: You can track progress here if needed
             },
@@ -105,7 +105,7 @@ const NavBar = () => {
   // ✅ Optimized GSAP Initial Animations
   useEffect(() => {
     if (typeof window !== "undefined" && navRef.current) {
-      gsap.to(navRef.current, { opacity: 1, duration: 1.5, delay: 10 })
+      gsap.to(navRef.current, { opacity: 1, duration: 2, delay: 10 })
 
       if (mobileNavRef.current) {
         gsap.set(mobileNavRef.current, { x: 200, opacity: 0 })
@@ -190,4 +190,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
