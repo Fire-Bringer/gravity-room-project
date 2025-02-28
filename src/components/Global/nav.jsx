@@ -4,7 +4,10 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import gsap from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
-gsap.registerPlugin(ScrollToPlugin)
+// Ensure GSAP plugins are registered outside component to avoid re-registration issues
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollToPlugin)
+}
 
 const navLinks = [
   { path: "#Home", label: "Home", targetId: "Home" },
@@ -19,9 +22,10 @@ const NavBar = () => {
   const navRef = useRef(null)
   const mobileNavRef = useRef(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const gsapRef = useRef(gsap)
+  // Track if animation is in progress
+  const isAnimatingRef = useRef(false)
 
-  // Optimized with proper dependencies and error handling
+  // Optimized scroll function with fallback mechanism
   const handleNavLinkClick = useCallback(
     (targetId, offset = -75) => {
       if (typeof window === "undefined") return
@@ -32,49 +36,86 @@ const NavBar = () => {
       try {
         const targetElement = document.getElementById(targetId)
 
-        if (targetElement) {
-          // Prevent multiple animations from stacking
-          gsapRef.current.killTweensOf(window)
+        if (targetElement && !isAnimatingRef.current) {
+          // Set animation flag
+          isAnimatingRef.current = true
+
+          // Kill any existing animations
+          gsap.killTweensOf(window)
 
           // Get accurate position
           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY
 
-          gsapRef.current.to(window, {
-            duration: 3, // Reduced from 3 for better responsiveness
-            scrollTo: { y: targetPosition + offset, autoKill: true },
-            ease: "power2.inOut",
+          // Use a more reliable approach with a fallback
+          gsap.to(window, {
+            duration: 1.5, // Shorter duration for better reliability
+            scrollTo: {
+              y: targetPosition + offset,
+              autoKill: false, // Changed to false to prevent early termination
+            },
+            ease: "power1.inOut", // Using a simpler easing function
+            onUpdate: () => {
+              // Optional: You can track progress here if needed
+            },
             onComplete: () => {
-              // Optional: Update URL hash after scrolling
-              // window.history.pushState(null, null, `#${targetId}`);
+              // Ensure we're at the right position with a fallback
+              if (Math.abs(window.scrollY - (targetPosition + offset)) > 10) {
+                // If GSAP didn't get us close enough, use native scrolling as fallback
+                window.scrollTo({
+                  top: targetPosition + offset,
+                  behavior: "smooth",
+                })
+              }
+
+              // Reset animation flag after a short delay
+              setTimeout(() => {
+                isAnimatingRef.current = false
+              }, 100)
+            },
+            onInterrupt: () => {
+              // Reset animation flag if interrupted
+              isAnimatingRef.current = false
             },
           })
-        } else {
+        } else if (!targetElement) {
           console.warn(`Element with id "${targetId}" not found!`)
         }
       } catch (error) {
         console.error("Navigation error:", error)
+        isAnimatingRef.current = false
+
+        // Fallback to native scrolling if GSAP fails
+        try {
+          const targetElement = document.getElementById(targetId)
+          if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY
+            window.scrollTo({
+              top: targetPosition + offset,
+              behavior: "smooth",
+            })
+          }
+        } catch (e) {
+          console.error("Fallback navigation failed:", e)
+        }
       }
     },
     [isMenuOpen],
   )
 
-  // Register GSAP plugins once on mount
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Ensure plugin is registered
-      if (!gsapRef.current.plugins.scrollTo) {
-        gsapRef.current.registerPlugin(ScrollToPlugin)
-      }
-    }
-  }, [])
-
   // ✅ Optimized GSAP Initial Animations
   useEffect(() => {
     if (typeof window !== "undefined" && navRef.current) {
-      gsapRef.current.to(navRef.current, { opacity: 1, duration: 1.5, delay: 10 }) // Reduced delay from 10 to 1
+      gsap.to(navRef.current, { opacity: 1, duration: 1.5, delay: 10 })
 
       if (mobileNavRef.current) {
-        gsapRef.current.set(mobileNavRef.current, { x: 200, opacity: 0 })
+        gsap.set(mobileNavRef.current, { x: 200, opacity: 0 })
+      }
+    }
+
+    // Cleanup function to prevent memory leaks
+    return () => {
+      if (typeof window !== "undefined") {
+        gsap.killTweensOf(window)
       }
     }
   }, [])
@@ -82,7 +123,7 @@ const NavBar = () => {
   useEffect(() => {
     if (typeof window === "undefined" || !mobileNavRef.current) return
 
-    gsapRef.current.to(mobileNavRef.current, {
+    gsap.to(mobileNavRef.current, {
       x: isMenuOpen ? 0 : 200,
       opacity: isMenuOpen ? 1 : 0,
       duration: 0.8,
@@ -149,3 +190,4 @@ const NavBar = () => {
 }
 
 export default NavBar
+
