@@ -5,7 +5,7 @@ import "@/styles/stars.css"
 const About = ({about}) => {
 
   return (
-    <section id="About" className="relative leading-none top-0 w-full min-h-screen mb-[100vh] flex flex-col text-center items-center justify-center pt-8 pb-8">
+    <section id="About" className="relative leading-none top-0 w-full min-h-screen flex flex-col text-center items-center justify-center pt-8 pb-8">
 
       {/* Starry Overlay */}
       <div className="stars"></div>
