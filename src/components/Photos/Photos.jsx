@@ -1,120 +1,70 @@
+"use client";
+import Image from "next/image";
 import "@/styles/stars.css";
 import "@/styles/photos.css";
 
-const Photos = ( {photos} ) => {
+const Photos = ({ photos }) => {
+  // Safely extract photo data in a single pass
+  const photoItems = photos?.details?.title?.map(item => ({
+    title: item.title || "",
+    image: item.image || "",
+    jap: item.jap || "",
+    eng: item.eng || ""
+  })) || [];
 
-  // Extract Definitions
-  const titles = [];
-  const images = [];
-  const japs = [];
-  const engs = [];
-
-  photos?.details?.title.forEach((item) => {
-    titles.push(item.title)
-  });
-
-  photos?.details?.title.forEach((item) => {
-    images.push(item.image)
-  });
-
-  photos?.details?.title.forEach((item) => {
-    japs.push(item.jap)
-  });
-
-  photos?.details?.title.forEach((item) => {
-    engs.push(item.eng)
-  });
+  // If no photos are available, provide feedback
+  if (photoItems.length === 0) {
+    return (
+      <section id="Photos" className="photos-container bg-[#0f0e0e] text-[#F0EAD6] py-16">
+        <div className="text-center">
+          <h2 className="text-2xl font-display mb-4">Photos</h2>
+          <p>No photos are currently available</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <section id="Photos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center py-16 mx[10vw]">
-
+    <section id="Photos" className="videos-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center py-16">
       {/* Starry Overlay */}
       <div className="stars"></div>
       <div className="twinkling"></div>
       <div className="clouds"></div>
 
-      <div className="font-body photos relative my-20 grid grid-cols-1 lg:grid-cols-2 text-center mx-[10vw]">
-
-        <div id="photo-1" className="photo animation-show">
-            <img
-              src={images[0]}
-              alt="Image of the moon at night"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[0]}</h3>
-            <p>{japs[0]}</p>
-            <br />
-            <br />
-            <p>{engs[0]}</p>
-        </div>
-        <div id="photo-2" className="photo animation-show">
-            <img
-              src={images[1]}
-              alt="Image of the sunset"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[1]}</h3>
-            <p>{japs[1]}</p>
-            <br />
-            <br />
-            <p>{engs[1]}</p>
-        </div>
-        <div id="photo-3" className="photo animation-show">
-            <img
-              src={images[2]}
-              alt="Image of a glass of champagne at night"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[2]}</h3>
-            <p>{japs[2]}</p>
-            <br />
-            <br />
-            <p>{engs[2]}</p>
-        </div>
-        <div id="photo-4" className="photo animation-show">
-            <img
-              src={images[3]}
-              alt="Image of flowers"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[3]}</h3>
-            <p>{japs[3]}</p>
-            <br />
-            <br />
-            <p>{engs[3]}</p>
-        </div>
-        <div id="photo-5" className="photo animation-show">
-            <img
-              src={images[4]}
-              alt="Image of a tree in the sun"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[4]}</h3>
-            <p>{japs[4]}</p>
-            <br />
-            <br />
-            <p>{engs[4]}</p>
-        </div>
-        <div id="photo-6" className="photo animation-show">
-            <img
-              src={images[5]}
-              alt="Image of a beachfront"
-              width={500}
-              height={500}
-            />
-            <h3 className="font-display">{titles[5]}</h3>
-            <p>{japs[5]}</p>
-            <br />
-            <br />
-            <p>{engs[5]}</p>
-        </div>
+      <div className="font-body photos relative my-20 grid grid-cols-1 lg:grid-cols-2 text-center mx-[10vw] gap-8">
+        {photoItems.map((photo, index) => (
+          <div
+            id={`photo-${index + 1}`}
+            className="photo animation-show"
+            key={index}
+          >
+            {photo.image ? (
+              <Image
+                src={photo.image}
+                alt={`Photo: ${photo.title || `Photo ${index + 1}`}`}
+                width={500}
+                height={500}
+                loading={index < 2 ? "eager" : "lazy"}
+                className="mx-auto"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFdQIB5zOTIQAAAABJRU5ErkJggg=="
+              />
+            ) : (
+              <div className="w-[500px] h-[500px] bg-gray-800 flex items-center justify-center mx-auto">
+                <p>Image not available</p>
+              </div>
+            )}
+            <h3 className="font-display mt-4">{photo.title}</h3>
+            {photo.jap && <p>{photo.jap}</p>}
+            {photo.jap && photo.eng && (
+              <>
+                <br />
+              </>
+            )}
+            {photo.eng && <p>{photo.eng}</p>}
+          </div>
+        ))}
       </div>
-
     </section>
   );
 };
