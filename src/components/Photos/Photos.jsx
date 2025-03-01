@@ -56,11 +56,6 @@ const Photos = ({ photos }) => {
             )}
             <h3 className="font-display mt-4">{photo.title}</h3>
             {photo.jap && <p>{photo.jap}</p>}
-            {photo.jap && photo.eng && (
-              <>
-                <br />
-              </>
-            )}
             {photo.eng && <p>{photo.eng}</p>}
           </div>
         ))}
