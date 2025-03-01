@@ -55,7 +55,7 @@ header {
   bottom: 5rem;
 }
 .bg-7 {
-  overflow: hidden;
+  overflow-x: hidden;
   bottom: 2rem;
 }
 

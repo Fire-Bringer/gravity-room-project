@@ -37,7 +37,7 @@ const Photos = ( {photos} ) => {
               width={500}
               height={500}
             />
-            <h3 className="font-display">{titles[0]}</h3>
+            <h3 className="font-display">Test</h3>
             <p>{descriptions[0]}</p>
         </div>
         <div id="photo-2" className="photo animation-show">
