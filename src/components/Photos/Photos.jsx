@@ -6,7 +6,8 @@ const Photos = ( {photos} ) => {
   // Extract Definitions
   const titles = [];
   const images = [];
-  const descriptions = [];
+  const japs = [];
+  const engs = [];
 
   photos?.details?.title.forEach((item) => {
     titles.push(item.title)
@@ -17,7 +18,11 @@ const Photos = ( {photos} ) => {
   });
 
   photos?.details?.title.forEach((item) => {
-    descriptions.push(item.description)
+    japs.push(item.description)
+  });
+
+  photos?.details?.title.forEach((item) => {
+    engs.push(item.description)
   });
 
   return (
@@ -38,7 +43,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[0]}</h3>
-            <p>{descriptions[0]}</p>
+            <p>{japs[0]}</p>
+            <br />
+            <br />
+            <p>{engs[0]}</p>
         </div>
         <div id="photo-2" className="photo animation-show">
             <img
@@ -48,7 +56,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[1]}</h3>
-            <p>{descriptions[1]}</p>
+            <p>{japs[1]}</p>
+            <br />
+            <br />
+            <p>{engs[1]}</p>
         </div>
         <div id="photo-3" className="photo animation-show">
             <img
@@ -58,7 +69,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[2]}</h3>
-            <p>{descriptions[2]}</p>
+            <p>{japs[2]}</p>
+            <br />
+            <br />
+            <p>{engs[2]}</p>
         </div>
         <div id="photo-4" className="photo animation-show">
             <img
@@ -68,7 +82,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[3]}</h3>
-            <p>{descriptions[3]}</p>
+            <p>{japs[3]}</p>
+            <br />
+            <br />
+            <p>{engs[3]}</p>
         </div>
         <div id="photo-5" className="photo animation-show">
             <img
@@ -78,7 +95,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[4]}</h3>
-            <p>{descriptions[4]}</p>
+            <p>{japs[4]}</p>
+            <br />
+            <br />
+            <p>{engs[4]}</p>
         </div>
         <div id="photo-6" className="photo animation-show">
             <img
@@ -88,7 +108,10 @@ const Photos = ( {photos} ) => {
               height={500}
             />
             <h3 className="font-display">{titles[5]}</h3>
-            <p>{descriptions[5]}</p>
+            <p>{japs[5]}</p>
+            <br />
+            <br />
+            <p>{engs[5]}</p>
         </div>
       </div>
 
