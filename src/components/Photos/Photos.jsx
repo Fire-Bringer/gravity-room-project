@@ -18,11 +18,11 @@ const Photos = ( {photos} ) => {
   });
 
   photos?.details?.title.forEach((item) => {
-    japs.push(item.description)
+    japs.push(item.jap)
   });
 
   photos?.details?.title.forEach((item) => {
-    engs.push(item.description)
+    engs.push(item.eng)
   });
 
   return (
