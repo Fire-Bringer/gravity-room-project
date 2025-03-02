@@ -17,51 +17,41 @@ async function getData() {
     { key: 'photos', url: '/rcms-api/5/photos/6' }
   ];
 
-  try {
-    const fetchPromises = endpoints.map(endpoint =>
-      fetch(process.env.BASE_URL + endpoint.url, {
-        next: { revalidate: 3600 }, // Cache for 1 hour
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        signal: AbortSignal.timeout(5000), // 5 second timeout
-      })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`Failed to fetch ${endpoint.key}: ${res.status} ${res.statusText}`);
-        }
-        return res.json();
-      })
-    );
+  const fetchPromises = endpoints.map(endpoint =>
+    fetch(process.env.BASE_URL + endpoint.url).then(res => res.json())
+  );
 
-    const [about, videos, photos] = await Promise.all(fetchPromises);
-    return { about, videos, photos };
+  const [about, videos, photos] = await Promise.all(fetchPromises);
 
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    // Return default/fallback data
-    return {
-      about: { data: [] },
-      videos: { data: [] },
-      photos: { data: [] }
-    };
-  }
+  return { about, videos, photos };
 }
 
+
 async function HomePage() {
+
   const { about, videos, photos } = await getData();
 
   return (
     <main>
+
       <ScrollAnimation>
+
         <Intro/>
+
         <About about={about} />
+
         <ScrollPanels/>
+
         <Videos videos={videos} />
+
         <Photos photos={photos} />
+
         <Music/>
+
         <Contact/>
+
       </ScrollAnimation>
+
     </main>
   );
 };

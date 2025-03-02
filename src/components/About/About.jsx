@@ -62,15 +62,21 @@ const About = ({ about }) => {
           {title}
         </h2>
 
-        {/* Image with proper Next.js optimization and error handling */}
+        {/* Image container with fixed dimensions */}
         <div className="w-[150px] h-[150px] relative rounded-full overflow-hidden animation-show">
           <Image
             src={profileImage}
             alt="Gravity Room Profile"
-            width={150}
-            height={150}
-            className="about-img rounded-full animation-show"
+            fill
+            sizes="150px"
+            priority
+            className="object-cover rounded-full animation-show"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
             onError={(e) => {
+              e.target.onerror = null; // Prevent infinite loop
               e.target.src = "/images/default-profile.jpg";
             }}
           />
