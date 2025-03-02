@@ -38,19 +38,15 @@ const Music = () => {
   return (
     <section
       id="Music"
-      className="music-container relative bg-[#0f0e0e] text-[#F0EAD6] flex flex-col items-center py-16"
+      className="music-container relative bg-transparent text-[#F0EAD6] flex flex-col items-center py-16"
     >
-      {/* Starry Overlay for visual consistency with other sections */}
-      <div className="stars"></div>
-      <div className="twinkling"></div>
-      <div className="clouds"></div>
 
       {/* Section Heading */}
       <h2 className="font-display text-3xl mb-12 relative z-10">Music</h2>
 
       {/* Loading State */}
       {isLoading && (
-        <div className="w-11/12 xl:w-4/5 h-80 bg-gray-800 animate-pulse flex items-center justify-center mb-8 relative z-10">
+        <div className="w-11/12 xl:w-1/2 h-80 bg-gray-800 animate-pulse flex items-center justify-center mb-8 relative z-10">
           <p>Loading music content...</p>
         </div>
       )}
@@ -68,7 +64,7 @@ const Music = () => {
           {spotifyEmbeds.map((embed) => (
             <div
               key={embed.id}
-              className="w-11/12 xl:w-4/5 music-embed animation-show"
+              className="w-11/12 xl:w-1/2 music-embed animation-show"
               aria-label={embed.title}
             >
               <iframe
