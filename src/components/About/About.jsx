@@ -63,7 +63,7 @@ const About = ({ about }) => {
         </h2>
 
         {/* Image container with fixed dimensions */}
-        <div className="w-[150px] h-[150px] relative rounded-full overflow-hidden animation-show">
+        <div className="w-[200px] h-[200px] relative rounded-full overflow-hidden animation-show">
           <Image
             src={profileImage}
             alt="Gravity Room Profile"

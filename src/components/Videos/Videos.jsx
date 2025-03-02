@@ -35,7 +35,9 @@ const Videos = ({ videos }) => {
         <div
           id={`video-${index + 1}`}
           key={index}
-          className={`font-body video-card relative z-10 w-11/12 flex flex-col${
+          className={`font-body video-card relative z-10 w-11/12 flex ${
+            index % 2 === 0 ? "flex-col-reverse" : "flex-col"
+          } ${
             index % 2 === 0 ? "-reverse lg:flex-row" : " lg:flex-row"
           } gap-10 py-10 lg:py-20 px-8 animation-show`}
         >
