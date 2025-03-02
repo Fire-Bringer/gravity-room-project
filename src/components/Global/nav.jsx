@@ -126,7 +126,7 @@ const NavBar = () => {
     gsap.to(mobileNavRef.current, {
       x: isMenuOpen ? 0 : 200,
       opacity: isMenuOpen ? 1 : 0,
-      duration: 0.8,
+      duration: 1.5,
       ease: "power3.out",
     })
   }, [isMenuOpen])
