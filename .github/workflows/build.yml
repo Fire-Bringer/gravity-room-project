@@ -74,7 +74,7 @@ jobs:
         env:
           webhook_url: "https://gravity-room.g.kuroco.app/direct/menu/github/"
           webhook_secret: "29e85cb6eb64bc942026391ff0aafe90"
-          data: '{"single_zip":"1","domain":"gravity-room.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          data: '{"single_zip":"1","domain":"gravity-room.net","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
 
   #for Push
   pushed_build:
@@ -126,4 +126,4 @@ jobs:
         env:
           webhook_url: "https://gravity-room.g.kuroco.app/direct/menu/github/"
           webhook_secret: "29e85cb6eb64bc942026391ff0aafe90"
-          data: '{"single_zip":"1","domain":"gravity-room.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          data: '{"single_zip":"1","domain":"gravity-room.net","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
