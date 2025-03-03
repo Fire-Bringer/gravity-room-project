@@ -20,7 +20,7 @@ const averiaSerifLibre = Averia_Serif_Libre({
 
 export const metadata: Metadata = {
   title: "Gravity Room",
-  description: "Life Portfolio",
+  description: "In the Gravity Room, all sorts of things come together. Just like how we are pulled toward the Earth by gravity...The Gravity Room project explores this world in a variety of ways. By Music, Photos, Videos, Words, and more. It is a blessing that we live in an age that is full of tolls to record the moments that are passing away.",
 };
 
 export default function RootLayout({
