@@ -17,6 +17,8 @@ jobs:
     name: Build(pullreq)
     if: (github.repository == 'Fire-Bringer/gravity-room-project' && github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/kuroco stage') && github.event.issue.pull_request != null)
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
       - name: "Get branch name and sha"
         id: get_branch
@@ -69,6 +71,8 @@ jobs:
     name: Build(pushed)
     if: (github.repository == 'Fire-Bringer/gravity-room-project' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch'))
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
